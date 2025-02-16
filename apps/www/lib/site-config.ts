@@ -2,8 +2,8 @@ import type { ButtonProps } from "@galleo/ui/components/base/button";
 import { type IconProps, Icons } from "@galleo/ui/icon";
 import { ROUTE_CONTACT_US } from "./routes";
 
-const COMPANY_NAME = "Ink & Scribe";
-const SUPPORT_EMAIL = "support@inkandscribe.com";
+const COMPANY_NAME = "Galleo";
+const SUPPORT_EMAIL = "support@galleo.ai";
 
 export const siteConfig: SiteConfig = {
   name: COMPANY_NAME,
@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
   links: {
     email: SUPPORT_EMAIL,
     talkToUs: ROUTE_CONTACT_US,
-    twitter: "https://twitter.com/inkandscribe",
+    twitter: "https://twitter.com/galleo_ai",
   },
   header: [
     {
@@ -23,16 +23,16 @@ export const siteConfig: SiteConfig = {
       buttonVariant: "default",
       target: "_blank",
       href: ROUTE_CONTACT_US,
-      label: "Save 5 hours per week",
+      label: "Book a demo today",
     },
   ],
   hero: {
-    title: ["Instantly Draft TM Advice &", "Automate Filings"],
+    title: ["Turn hours of", "preliminary TM review", "into seconds"],
     description:
-      "Free your team from repetitive TM tasks—get AI-powered TM advice & filing automation tailored for law firms and TM agencies.",
+      "Galleo instantly drafts preliminary trademark assessments, fee quotes, and recommends NICE classifications, saving IP professionals up to 5 hours a day.",
     cta: {
       href: ROUTE_CONTACT_US,
-      label: "Save 5 hours per week",
+      label: "Book a demo today",
       target: "_blank",
       buttonVariant: "default",
     },
@@ -66,8 +66,8 @@ export const siteConfig: SiteConfig = {
     ],
   },
   cta: {
-    subtitle: "See how AI can close you more deals this week",
-    buttonText: "Close more deals",
+    subtitle: "Reclaim your time and elevate your practice today",
+    buttonText: "Book a demo today",
     href: ROUTE_CONTACT_US,
   },
   footer: {

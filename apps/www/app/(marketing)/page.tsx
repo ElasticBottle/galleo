@@ -1,10 +1,11 @@
 "use client";
 import { Spacer } from "@galleo/ui/components/base/spacer";
 import { Cta } from "./_components/cta";
-import { AutomatedFilling } from "./_components/feature/automated-filling";
+import { AIDrafting } from "./_components/feature/ai-drafting";
 import { FeatureSection } from "./_components/feature/container";
 import { Email } from "./_components/feature/email";
 import { Integrated } from "./_components/feature/integrated";
+import { Security } from "./_components/feature/security";
 import Footer from "./_components/footer";
 import { Hero } from "./_components/hero";
 import { Logos } from "./_components/logos";
@@ -15,94 +16,121 @@ export default function LandingPage() {
   return (
     <div>
       <Header />
-      <Spacer className="h-24 md:h-32" />
+      <Spacer className="h-100- md:h-60" />
       <Hero />
-      <Spacer className="h-20 md:h-24" />
-      <Section
-        title="Who We Are"
-        subtitle="Built by IP Professionals, Powered by AI"
-      >
-        <Logos />
-        <Spacer className="h-8 md:h-10" />
+      <Spacer className="h-100 md:h-60" />
+      <Section subtitle="Built by IP professionals, powered by AI">
         <div className="text-center text-muted-foreground">
-          <p>Trained by IP Law Experts - anticipates unique TM challenges</p>
           <p>
-            Faster & More Efficient - No more manual drafting or form-filling
+            Built by Silicon Valley AI experts and IP lawyers, Galleo seamlessly
+            integrates AI into trademark filing—powering the future of IP
+            practice.
           </p>
-          <p>Increased Accuracy - AI analyzes every case instantly</p>
         </div>
+        <Spacer className="h-8 md:h-10" />
+        <Logos />
       </Section>
 
       <Spacer className="h-20 md:h-24" />
-
       <FeatureSection
-        label="Knowledge"
-        title="Instant First-Cut Advise"
+        label=""
+        title="Instantly drafted enquiry responses"
         description={
           <div className="space-y-4">
-            <p>Lawyers simply review & send—saving hours per case.</p>
+            <p>
+              Leave manual drafting behind—Galleo analyses queries and generates
+              replies in seconds. Simply review & send.
+            </p>
             <div className="space-y-2">
-              <p>AI instantly drafts a first-cut legal review with:</p>
+              <p>Galleo's draft includes:</p>
               <ul className="ml-4 list-disc space-y-1 text-muted-foreground/80">
-                <li>Classes & marks to file</li>
-                <li>IPOS search results</li>
-                <li>Legal rationale & recommendations</li>
+                <li>Integrated client research for smarter responses</li>
+                <li>Recommended NICE classifications</li>
+                <li>Automatically calculated fee estimates</li>
+                <li>Follow-up requests customised for each client</li>
               </ul>
             </div>
           </div>
         }
-        ctaText="Explore Knowledge"
+        ctaText=""
         showcaseContent={<Email />}
       />
 
       <Spacer className="h-20 md:h-24" />
 
       <FeatureSection
-        label="Speed"
-        title="Automated Filing"
+        label=""
+        title="Effortless drafting, always in your control"
         description={
           <div className="space-y-4">
-            <p>Frees up time for high-value legal work</p>
+            <p>
+              Save time without sacrificing quality—Galleo drafts replies in
+              your style for consistent, professional client interactions. Need
+              changes? Just prompt Galleo to refine or edit the draft in
+              seconds.
+            </p>
             <ul className="ml-4 list-disc space-y-1 text-muted-foreground/80 ">
-              <li>AI pre-fills all required TM filing forms</li>
-              <li>Reduces human errors & eliminates repetitive data entry</li>
+              <li>Smart, personalised drafting </li>
+              <li>Customisable content incorporating your templates </li>
+              <li>Prompt Galleo to refine tone & wording instantly </li>
             </ul>
           </div>
         }
-        ctaText="See how fast we can work"
-        showcaseContent={<AutomatedFilling />}
+        ctaText=""
+        showcaseContent={<AIDrafting />}
         position="left"
       />
 
       <Spacer className="h-20 md:h-24" />
 
       <FeatureSection
-        label="Integrated"
-        title="Seamlessly Integrated into Your Workflow"
+        label=""
+        title="Your AI-powered associate—right in your inbox"
         description={
           <div className="space-y-4">
-            <p>No New Tools. No Extra Steps. Just Faster Work.</p>
+            <p>
+              Galleo works like a digital first-year associate, saving you hours
+              by handling trademark tasks instantly—all within Outlook. No extra
+              tools, no disruptions.
+            </p>
             <ul className="ml-4 list-disc space-y-2 text-muted-foreground/80">
+              <li>Direct Outlook integration, sent instantly to your drafts</li>
+              <li>Works whenever, wherever you are</li>
+            </ul>
+          </div>
+        }
+        ctaText=""
+        showcaseContent={<Integrated />}
+      />
+
+      <Spacer className="h-20 md:h-24" />
+
+      <FeatureSection
+        label="Features"
+        title="Your data, fully protected"
+        description={
+          <div className="space-y-4">
+            <p>
+              Galleo keeps your information secure with encryption at every
+              step. No data storage, no unnecessary access—complete privacy and
+              control.
+            </p>
+            <ul className="ml-4 list-disc space-y-1 text-muted-foreground/80 ">
+              <li>End-to-end encryption </li>
+              <li>No data storage </li>
               <li>
-                <span className="inline-block">📩</span> Email. Get Advice. Send
-                it to Clients.
+                Strict access control
                 <p className="mt-1 text-sm">
-                  Our AI lives in Outlook—just email your TM inquiry and get an
-                  instant draft response to clients ready in your outbox.
-                </p>
-              </li>
-              <li>
-                <span className="inline-block">⚡</span> 24/7 AI-Powered
-                Efficiency
-                <p className="mt-1 text-sm">
-                  Always on and responds instantly. Work at your convenience.
+                  Galleo only reads the emails you select for drafting, ensuring
+                  complete privacy and control.
                 </p>
               </li>
             </ul>
           </div>
         }
-        ctaText="Learn more about integrations"
-        showcaseContent={<Integrated />}
+        ctaText=""
+        showcaseContent={<Security />}
+        position="left"
       />
 
       <Spacer className="h-20 md:h-24" />
