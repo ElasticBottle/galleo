@@ -20,7 +20,7 @@ export default function LandingPage() {
       <Hero />
       <Spacer className="h-100 md:h-60" />
       <Section subtitle="Built by IP professionals, powered by AI">
-        <div className="text-center text-muted-foreground">
+        <div className="mx-auto max-w-md text-center text-muted-foreground">
           <p>
             Built by Silicon Valley AI experts and IP lawyers, Galleo seamlessly
             integrates AI into trademark filing—powering the future of IP
@@ -34,7 +34,7 @@ export default function LandingPage() {
       <Spacer className="h-20 md:h-24" />
       <FeatureSection
         label=""
-        title="Instantly drafted enquiry responses"
+        title="Instantly drafted enquiry reponses"
         description={
           <div className="space-y-4">
             <p>

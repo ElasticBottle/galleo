@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
   description:
     "Free your team from repetitive TM tasks with AI-powered trademark advice and filing automation tailored for law firms and TM agencies. Built by IP professionals and trained by IP law experts, our solution anticipates unique trademark challenges while delivering faster, more efficient processing and increased accuracy through instant AI analysis.",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:6969",
-  icon: Icons.logo,
+  icon: Icons.logoSmall,
   keywords: ["Trademark", "Branding", "Patent", "IP"],
   links: {
     email: SUPPORT_EMAIL,

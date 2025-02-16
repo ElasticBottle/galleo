@@ -26,7 +26,7 @@ export function FeatureSection({
         <span className="font-medium text-muted-foreground text-sm">
           {label}
         </span>
-        <h2 className="mt-6 font-medium font-serif text-5xl text-foreground leading-tight">
+        <h2 className="mt-6 font-medium text-5xl text-foreground leading-tight">
           {title}
         </h2>
         <div className="mt-6 text-lg text-muted-foreground">{description}</div>

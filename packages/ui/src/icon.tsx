@@ -16,13 +16,14 @@ import {
   Trash,
   XIcon,
 } from "lucide-react";
-import { BrandLogo } from "./components/base/brand-logo";
+import { BrandLogo, BrandLogoSmall } from "./components/base/brand-logo";
 import { cn } from "./utils/cn";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   logo: (props: IconProps) => <BrandLogo {...props} />,
+  logoSmall: (props: IconProps) => <BrandLogoSmall {...props} />,
   play: PlayIcon,
   x: XIcon,
   stop: SquareIcon,

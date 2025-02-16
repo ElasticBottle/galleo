@@ -20,7 +20,7 @@ export function Cta() {
           target="_blank"
           className={cn(
             buttonVariants({ variant: "default" }),
-            "flex w-full gap-2 text-background sm:w-auto",
+            "flex w-full gap-2 sm:w-auto",
           )}
         >
           {siteConfig.cta.buttonText}

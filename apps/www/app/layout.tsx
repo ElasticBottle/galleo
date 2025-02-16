@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Manrope, Playfair_Display } from "next/font/google";
 import "../global.css";
 import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import { getQueryClient } from "~/lib/client/react-query";
@@ -9,6 +9,11 @@ import { Providers } from "./providers";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
 });
 
 const geist = Geist({
@@ -42,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${geist.variable} ${geistMono.variable} min-h-screen w-full scroll-smooth antialiased`}
+      className={`${manrope.variable} ${playfair.variable} ${geist.variable} ${geistMono.variable} min-h-screen w-full scroll-smooth antialiased`}
     >
       <body>
         <Providers>

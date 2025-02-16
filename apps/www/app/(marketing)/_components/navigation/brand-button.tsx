@@ -1,3 +1,4 @@
+import { Icons } from "@galleo/ui/icon";
 import { cn } from "@galleo/ui/utils/cn";
 import Link from "next/link";
 import { ROUTE_HOME } from "~/lib/routes";
@@ -8,12 +9,9 @@ export function BrandButton({ className }: { className?: string }) {
     <Link
       href={ROUTE_HOME}
       title={siteConfig.name}
-      className={cn("flex items-center space-x-2", className)}
+      className={cn("flex items-center space-x-3", className)}
     >
-      <siteConfig.icon className="size-[30px]" />
-      <span className="font-serif text-xl tracking-tight">
-        {siteConfig.name}
-      </span>
+      <Icons.logo className="h-[40px] w-[120px] invert md:h-[50px] md:w-[150px] dark:invert-0" />
     </Link>
   );
 }

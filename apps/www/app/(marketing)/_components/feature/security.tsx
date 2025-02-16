@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Security() {
   return (
-    <div className="relative flex h-96 w-full items-center justify-center overflow-hidden rounded-xl bg-black shadow-2xl">
+    <div className="relative flex h-96 w-full items-center justify-center rounded-xl bg-black shadow-2xl">
       {/* Outer Cyber Security Rings */}
       <motion.div
         className="absolute h-96 w-96 rounded-full border-[5px] border-blue-500 opacity-30"
