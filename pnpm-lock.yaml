@@ -113,6 +113,9 @@ importers:
 
   apps/outlook-extension:
     dependencies:
+      '@ai-sdk/react':
+        specifier: ^1.1.16
+        version: 1.1.16(react@19.0.0)(zod@3.24.2)
       '@galleo/ai-server':
         specifier: workspace:*
         version: link:../ai-server
@@ -8807,7 +8810,7 @@ snapshots:
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.13.4
 
   '@types/node-fetch@2.6.12':
     dependencies:

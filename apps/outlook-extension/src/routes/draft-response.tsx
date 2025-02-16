@@ -1,8 +1,8 @@
+import { useChat } from "@ai-sdk/react";
 import { Button } from "@galleo/ui/components/base/button";
 import { Input } from "@galleo/ui/components/base/input";
 import { Icons } from "@galleo/ui/icon";
 import { createFileRoute, redirect } from "@tanstack/react-router";
-import { useChat } from "ai/react";
 import { useEffect, useRef } from "react";
 import { ChatMessageWidget } from "~/components/chat";
 import { getSession } from "~/lib/ai-server";
@@ -27,7 +27,7 @@ function DraftResponse() {
     handleInputChange,
     handleSubmit,
     messages,
-    isLoading,
+    status,
     error,
     reload,
     stop,
@@ -47,6 +47,7 @@ function DraftResponse() {
   });
   // TODO: clean this up
   const isReady = useRef(false);
+  const isLoading = status === "submitted" || status === "streaming";
 
   console.log("data", data);
   console.log("messages", messages);
