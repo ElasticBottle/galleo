@@ -25,7 +25,7 @@
     "@tanstack/react-query-devtools": "catalog:react-query",
     "effect": "^3.12.7",
     "framer-motion": "^12.0.6",
-    "next": "15.1.6",
+    "next": "15.1.7",
     "posthog-js": "^1.215.1",
     "react": "catalog:react19",
     "react-dom": "catalog:react19"
