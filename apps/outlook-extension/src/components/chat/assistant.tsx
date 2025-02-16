@@ -1,6 +1,6 @@
 import { Button } from "@galleo/ui/components/base/button";
 import { Icons } from "@galleo/ui/icon";
-import { cn } from "~/lib/utils";
+import { cn } from "@galleo/ui/utils/cn";
 
 interface AssistantMessageProps {
   message: string;

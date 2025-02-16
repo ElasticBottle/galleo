@@ -23,16 +23,16 @@
     }
   },
   "scripts": {
-    "migrate-generate": "bun with-env drizzle-kit generate",
-    "migrate-push": "bun with-env drizzle-kit migrate",
-    "pull": "bun with-env drizzle-kit pull",
-    "push": "bun with-env drizzle-kit push",
-    "studio": "bun with-env drizzle-kit studio",
+    "migrate-generate": "pnpm with-env drizzle-kit generate",
+    "migrate-push": "pnpm with-env drizzle-kit migrate",
+    "pull": "pnpm with-env drizzle-kit pull",
+    "push": "pnpm with-env drizzle-kit push",
+    "studio": "pnpm with-env drizzle-kit studio",
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "git clean -xdf .turbo node_modules dist .cache",
-    "format": "bun x @biomejs/biome format . --write",
-    "lint": "bun x @biomejs/biome lint . --write",
+    "format": "pnpx @biomejs/biome format . --write",
+    "lint": "pnpx @biomejs/biome lint . --write",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
     "with-env": "dotenvx run -f ../../.env -- "
   },

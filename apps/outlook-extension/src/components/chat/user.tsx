@@ -1,9 +1,9 @@
 import { Button } from "@galleo/ui/components/base/button";
 import { Textarea } from "@galleo/ui/components/base/textarea";
 import { Icons } from "@galleo/ui/icon";
+import { cn } from "@galleo/ui/utils/cn";
 import { useState } from "react";
 import type { UserSession } from "~/lib/ai-server";
-import { cn } from "~/lib/utils";
 
 function getInitials(name: string | null): string {
   if (!name) return "U";

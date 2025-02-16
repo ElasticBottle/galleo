@@ -14,12 +14,12 @@
     "lint:fix": "office-addin-lint fix",
     "signin": "office-addin-dev-settings m365-account login",
     "signout": "office-addin-dev-settings m365-account logout",
-    "dev:ext": "office-addin-debugging start manifest.xml --app outlook --dev-server \"bun run dev-server\"",
+    "dev:ext": "office-addin-debugging start manifest.xml --app outlook --dev-server \"pnpm run dev-server\"",
     "stop": "office-addin-debugging stop manifest.xml",
     "validate": "office-addin-manifest validate manifest.xml",
     "clean": "git clean -xdf .turbo node_modules .cache",
-    "lint": "bun x @biomejs/biome lint . --write",
-    "format": "bun x @biomejs/biome format . --write",
+    "lint": "pnpx @biomejs/biome lint . --write",
+    "format": "pnpx @biomejs/biome format . --write",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
