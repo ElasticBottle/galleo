@@ -34,7 +34,7 @@ export default function Footer() {
           <span className="text-foreground text-sm tracking-tight">
             Copyright © {new Date().getFullYear()}{" "}
             <Link href="/" className="cursor-pointer">
-              {siteConfig.name}
+              {"Galleo AI Pte. Ltd."}
             </Link>
           </span>
           <ul className="flex justify-start text-foreground text-sm tracking-tight md:justify-end">
