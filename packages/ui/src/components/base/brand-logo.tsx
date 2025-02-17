@@ -3,15 +3,11 @@ import type { IconProps } from "../../icon";
 export function BrandLogoSmall(props: IconProps) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="30"
-      zoomAndPan="magnify"
-      viewBox="0 0 30 30.000001"
-      height="30"
-      preserveAspectRatio="xMidYMid meet"
-      version="1.0"
-      {...props}
+      img src="/galleo-logo.png" 
+      alt="Galleo Logo" 
+      width={30} 
+      height={30} 
+      {...props} />
     >
       <title>Galleo</title>
       <defs>
