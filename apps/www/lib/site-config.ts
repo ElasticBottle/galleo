@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
     },
   ],
   hero: {
-    title: ["Turn hours of", "preliminary TM review", "into seconds"],
+    title: ["Reduce hours of drafting initial trademark assessments into seconds"],
     description:
       "Galleo instantly drafts preliminary trademark assessments, fee quotes, and recommends NICE classifications, saving IP professionals up to 5 hours a day.",
     cta: {
