@@ -4,8 +4,8 @@ import { type Content, getAllContent } from "~/lib/mdx"
 import { Section } from "../_components/section"
 
 export const metadata: Metadata = {
-  title: "Insights | Galleo",
-  description: "Explore our collection of insights about AI, productivity, and legal tech.",
+  title: "Insights",
+  description: "Explore our collection of insights on the latest developments in IP law, AI, and the intersection of law and AI",
 }
 
 export default async function InsightsPage() {
@@ -17,7 +17,7 @@ export default async function InsightsPage() {
         <div className="flex items-baseline justify-between mb-12">
           <h1 className="text-4xl font-bold">Insights</h1>
           <p className="text-muted-foreground">
-            A series of articles that will help you understand legal tech
+            Explore our collection of insights on the latest developments in IP law, AI, and the intersection of law and AI
           </p>
         </div>
         <div className="grid gap-8">
