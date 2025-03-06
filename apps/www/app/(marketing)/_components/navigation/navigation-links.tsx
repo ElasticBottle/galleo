@@ -5,7 +5,6 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@galleo/ui/components/base/navigation-menu";
 import { cn } from "@galleo/ui/utils/cn";
 import Link from "next/link";
@@ -26,7 +25,7 @@ export function NavigationLinks() {
               <Link
                 href={item.href}
                 data-attr={`header-button-${item.label}`}
-                className={cn(navigationMenuTriggerStyle(), "text-base")}
+                className="px-4 py-2 text-base transition-colors hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
                 target={item.target}
               >
                 {item.label}

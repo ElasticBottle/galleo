@@ -6,16 +6,13 @@ import { FeatureSection } from "./_components/feature/container";
 import { Email } from "./_components/feature/email";
 import { Integrated } from "./_components/feature/integrated";
 import { Security } from "./_components/feature/security";
-import Footer from "./_components/footer";
 import { Hero } from "./_components/hero";
 import { Logos } from "./_components/logos";
-import { Header } from "./_components/navigation/header";
 import { Section } from "./_components/section";
 
 export default function LandingPage() {
   return (
     <div>
-      <Header />
       <Spacer className="h-100- md:h-60" />
       <Hero />
       <Spacer className="h-100 md:h-60" />
@@ -137,8 +134,6 @@ export default function LandingPage() {
 
       <Cta />
       <Spacer className="h-20 md:h-24" />
-
-      <Footer />
     </div>
   );
 }

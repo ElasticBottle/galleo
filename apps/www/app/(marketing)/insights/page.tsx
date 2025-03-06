@@ -13,41 +13,53 @@ export default async function InsightsPage() {
 
   return (
     <Section className="py-16">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <div className="flex items-baseline justify-between mb-8">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="flex items-baseline justify-between mb-12">
           <h1 className="text-4xl font-bold">Insights</h1>
           <p className="text-muted-foreground">
             A series of articles that will help you understand legal tech
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8">
           {insights.map((article: Content) => (
             <Link 
               key={article.slug} 
               href={`/insights/${article.slug}`}
               className="group block bg-white dark:bg-white/5 rounded-lg border border-border hover:border-border-hover transition-colors overflow-hidden"
             >
-              {article.metadata.image && (
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <img 
-                    src={article.metadata.image} 
-                    alt={article.metadata.title}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-              )}
-              <div className="p-6">
-                <div className="uppercase tracking-wider text-xs text-muted-foreground mb-2">
-                  {article.metadata.category || "INSIGHTS"}
-                </div>
-                <h2 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {article.metadata.title}
-                </h2>
-                <p className="text-muted-foreground mb-4 line-clamp-2">
-                  {article.metadata.description}
-                </p>
-                <div className="text-sm text-muted-foreground">
-                  {article.metadata.readingTime || "3 min read"}
+              <div className="flex flex-col md:flex-row">
+                {article.metadata.image && (
+                  <div className="md:w-1/3 relative">
+                    <div className="aspect-[4/3] md:aspect-[3/3] relative">
+                      <img 
+                        src={article.metadata.image} 
+                        alt={article.metadata.title}
+                        className="object-cover absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </div>
+                )}
+                <div className="p-8 md:w-2/3">
+                  <div className="uppercase tracking-wider text-xs text-muted-foreground mb-3">
+                    {article.metadata.category || "INSIGHTS"}
+                  </div>
+                  <h2 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                    {article.metadata.title}
+                  </h2>
+                  <p className="text-muted-foreground mb-6 line-clamp-2">
+                    {article.metadata.description}
+                  </p>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    {article.metadata.author && (
+                      <span>{article.metadata.author}</span>
+                    )}
+                    {article.metadata.date && (
+                      <time dateTime={article.metadata.date}>
+                        {new Date(article.metadata.date).toLocaleDateString()}
+                      </time>
+                    )}
+                    <span>{article.metadata.readingTime || "3 min read"}</span>
+                  </div>
                 </div>
               </div>
             </Link>
