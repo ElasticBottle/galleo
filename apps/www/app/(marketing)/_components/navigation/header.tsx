@@ -4,7 +4,8 @@ import { cn } from "@galleo/ui/utils/cn";
 import { useEffect, useState } from "react";
 import { BrandButton } from "./brand-button";
 import { SiteDrawer } from "./site-drawer";
-import { SiteMenu } from "./site-menu";
+import { NavigationLinks } from "./navigation-links";
+import { ActionButtons } from "./action-buttons";
 
 export function Header() {
   const [addBorder, setAddBorder] = useState(false);
@@ -29,11 +30,17 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-3 md:px-4">
         <BrandButton />
 
-        <div className="hidden lg:block">
-          <SiteMenu />
+        <div className="hidden lg:flex flex-1 justify-center">
+          <NavigationLinks />
         </div>
-        <div className="block lg:hidden">
-          <SiteDrawer />
+
+        <div className="flex items-center gap-4">
+          <div className="hidden lg:block">
+            <ActionButtons />
+          </div>
+          <div className="block lg:hidden">
+            <SiteDrawer />
+          </div>
         </div>
       </div>
       <hr
