@@ -25,13 +25,16 @@
     "@tanstack/react-query-devtools": "catalog:react-query",
     "effect": "^3.12.7",
     "framer-motion": "^12.0.6",
+    "gray-matter": "^4.0.3",
     "next": "15.1.7",
+    "next-mdx-remote": "^4.4.1",
     "posthog-js": "^1.215.1",
     "react": "catalog:react19",
     "react-dom": "catalog:react19"
   },
   "devDependencies": {
     "@galleo/typescript": "workspace:*",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "catalog:",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",

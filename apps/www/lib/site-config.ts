@@ -20,6 +20,18 @@ export const siteConfig: SiteConfig = {
   header: [
     {
       variant: "button",
+      buttonVariant: "navigation",
+      href: "/",
+      label: "Home",
+    },
+    {
+      variant: "button",
+      buttonVariant: "navigation",
+      href: "/insights",
+      label: "Insights",
+    },
+    {
+      variant: "button",
       buttonVariant: "default",
       target: "_blank",
       href: ROUTE_CONTACT_US,
