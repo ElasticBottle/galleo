@@ -38,7 +38,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
-    "jiti": "^2.4.1",
+    "jiti": "^2.4.2",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   }
