@@ -260,7 +260,7 @@ importers:
         specifier: catalog:react19
         version: 19.0.3(@types/react@19.0.8)
       jiti:
-        specifier: ^2.4.1
+        specifier: ^2.4.2
         version: 2.4.2
       tailwindcss:
         specifier: 'catalog:'
