@@ -6,7 +6,7 @@ const port = packageJson.config.dev_server_port || 3099;
 console.log(`Starting dev server on port ${port}...`);
 
 const devProcess = exec(
-  `pnpm vite --port ${port} --host`,
+  `pnpm with-env vite --port ${port} --host`,
   (error, stdout, stderr) => {
     if (error) {
       console.error(`Error: ${error}`);

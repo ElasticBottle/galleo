@@ -6,6 +6,7 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { ChatMessageWidget } from "~/components/chat";
 import { getSession } from "~/lib/ai-server";
+import { env } from "~/lib/env";
 
 export const Route = createFileRoute("/draft-response")({
   beforeLoad: async () => {
@@ -34,7 +35,7 @@ function DraftResponse() {
     data,
     append,
   } = useChat({
-    api: "http://localhost:6922/api/chat",
+    api: env.NEXT_PUBLIC_CHAT_API_URL,
     credentials: "include",
     onResponse: (response) => {
       if (!response.ok) {

@@ -1,16 +1,16 @@
 import { safe } from "@galleo/result";
 import { type Context, Hono } from "hono";
 import { validator } from "hono/validator";
-import { generateCodeVerifier, generateState } from "../../lib/crypto/oauth";
-import type { EnvSchema } from "../../lib/env";
+import { generateCodeVerifier, generateState } from "../crypto/oauth";
+import type { EnvSchema } from "../env";
 import {
   getCookie,
   getEnv,
   getSignedCookie,
   setCookie,
   setSignedCookie,
-} from "../../lib/hono";
-import type { CookieSerializeOptions } from "../../lib/hono.type";
+} from "../hono";
+import type { CookieSerializeOptions } from "../hono.type";
 import {
   OAUTH_COOKIE_REDIRECT_NAME,
   OAUTH_COOKIE_SESSION_NAME,
@@ -18,8 +18,8 @@ import {
   OAUTH_COOKIE_VERIFIER_NAME,
   OAUTH_LOGIN_VALIDITY_MILLISECONDS,
   SESSION_COOKIE_SETTINGS,
-} from "../../lib/oauth/constant";
-import type { OAuth2Tokens, TokenStorage } from "../../lib/oauth/type";
+} from "./constant";
+import type { OAuth2Tokens, TokenStorage } from "./type";
 
 function handleRedirect({
   ctx,

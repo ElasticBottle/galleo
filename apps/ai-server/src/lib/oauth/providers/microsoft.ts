@@ -1,14 +1,14 @@
-import { Buffer } from "node:buffer";
 import { safeFetch } from "@galleo/result";
 import { Hono } from "hono";
-import { onLoginComplete } from "../../lib/auth/on-login-complete";
-import { getDb } from "../../lib/hono";
-import { TOKEN_STORAGE } from "../../lib/oauth/constant";
-import { createAuthorizationURL } from "../../lib/oauth/create-authorization-url";
-import { getUserProfile } from "../../lib/oauth/get-user-profile";
-import type { OAuth2Tokens, OAuthProviderConfig } from "../../lib/oauth/type";
-import { validateAuthorizationCode } from "../../lib/oauth/validate-authorization-code";
-import { createOauthRouter } from "./oauth";
+import { Buffer } from "node:buffer";
+import { onLoginComplete } from "../../auth/on-login-complete";
+import { getDb } from "../../hono";
+import { TOKEN_STORAGE } from "../constant";
+import { createAuthorizationURL } from "../create-authorization-url";
+import { getUserProfile } from "../get-user-profile";
+import { createOauthRouter } from "../oauth";
+import type { OAuth2Tokens, OAuthProviderConfig } from "../type";
+import { validateAuthorizationCode } from "../validate-authorization-code";
 
 // Microsoft OAuth endpoints and configuration
 const MICROSOFT_TENANT_ID = "common";

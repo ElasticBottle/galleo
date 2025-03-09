@@ -8,13 +8,14 @@
     "dev_server_port": 3099
   },
   "scripts": {
-    "dev-server": "tsx dev.ts",
-    "build-extension": "vite build",
-    "serve-extension": "vite preview",
     "lint:fix": "office-addin-lint fix",
     "signin": "office-addin-dev-settings m365-account login",
     "signout": "office-addin-dev-settings m365-account logout",
-    "dev:ext": "office-addin-debugging start manifest.xml --app outlook --dev-server \"pnpm run dev-server\"",
+    "with-env": "dotenvx run -f ../../.env --",
+    "build:ext": "vite build",
+    "serve:ext": "vite preview",
+    "dev:ext": "tsx dev.ts",
+    "load:ext": "office-addin-debugging start manifest.xml --app outlook --dev-server \"pnpm run dev:ext\"",
     "stop": "office-addin-debugging stop manifest.xml",
     "validate": "office-addin-manifest validate manifest.xml",
     "clean": "git clean -xdf .turbo node_modules .cache",
@@ -32,7 +33,8 @@
     "ai": "^4.1.21",
     "hono": "^4.6.20",
     "react": "catalog:react19",
-    "react-dom": "catalog:react19"
+    "react-dom": "catalog:react19",
+    "valibot": "^1.0.0-beta.10"
   },
   "devDependencies": {
     "@galleo/typescript": "workspace:*",
@@ -49,6 +51,7 @@
     "office-addin-manifest": "^1.13.6",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
     "vite": "^6.0.3",
     "vite-plugin-mkcert": "^1.17.6",
     "vite-tsconfig-paths": "^5.1.4"
