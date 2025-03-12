@@ -388,8 +388,8 @@ importers:
         specifier: ^12.0.6
         version: 12.4.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-themes:
-        specifier: ^0.4.3
-        version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react-dropzone:
         specifier: ^14.3.5
         version: 14.3.5(react@19.0.0)
@@ -5242,8 +5242,8 @@ packages:
       react: '>=16.x <=18.x'
       react-dom: '>=16.x <=18.x'
 
-  next-themes@0.4.4:
-    resolution: {integrity: sha512-LDQ2qIOJF0VnuVrrMSMLrWGjRMkq+0mpgl6e0juCLqdJ+oo8Q84JRWT6Wh11VDQKkMMe+dVzDKLWs5n87T+PkQ==}
+  next-themes@0.4.6:
+    resolution: {integrity: sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==}
     peerDependencies:
       react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
       react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
@@ -12199,7 +12199,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  next-themes@0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  next-themes@0.4.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
