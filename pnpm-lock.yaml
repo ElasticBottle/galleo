@@ -47,8 +47,8 @@ importers:
         specifier: ^2.27.12
         version: 2.27.12
       '@dotenvx/dotenvx':
-        specifier: ^1.25.1
-        version: 1.36.0
+        specifier: ^1.39.0
+        version: 1.39.0
       '@galleo/typescript':
         specifier: workspace:*
         version: link:tooling/typescript
@@ -837,8 +837,8 @@ packages:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
 
-  '@dotenvx/dotenvx@1.36.0':
-    resolution: {integrity: sha512-SCS+N/UdQcMwJCefvC32K5VD4kV19wC32eR2lJ0S+9gurNngJAK96BZBPcIHNTi0tEFa71DBUbiRQiD2+OVyIQ==}
+  '@dotenvx/dotenvx@1.39.0':
+    resolution: {integrity: sha512-qGfDpL/3S17MQYXpR3HkBS5xNQ7wiFlqLdpr+iIQzv17aMRcSlgL4EjMIsYFZ540Dq17J+y5FVElA1AkVoXiUA==}
     hasBin: true
 
   '@drizzle-team/brocli@0.10.2':
@@ -7481,7 +7481,7 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
-  '@dotenvx/dotenvx@1.36.0':
+  '@dotenvx/dotenvx@1.39.0':
     dependencies:
       commander: 11.1.0
       dotenv: 16.4.7
