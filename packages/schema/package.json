@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
-    "effect": "^3.12.7"
+    "effect": "^3.14.5"
   },
   "devDependencies": {
     "@galleo/typescript": "workspace:*",
