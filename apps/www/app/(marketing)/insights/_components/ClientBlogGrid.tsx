@@ -3,6 +3,18 @@ import Link from "next/link";
 import { useState } from "react";
 import { type Content } from "~/lib/mdx";
 
+// Category explainers (fill in as needed)
+const CATEGORY_EXPLAINERS: Record<string, string> = {
+  "AI Legal Developments":
+    "Covers legal cases, regulations, and news about the future of AI, including how AI is used, trained, and governed.",
+  "Transforming Law with AI":
+    "Explores how AI is changing legal practice, from automation to new business models.",
+  "Trademark Basics":
+    "Guides and tips for understanding and managing trademarks in the modern world.",
+  // Add more as needed, or use a placeholder:
+  // "Other Category": "Description for this category.",
+};
+
 export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
   // Sort by date descending
   const sorted = [...articles].sort(
@@ -10,24 +22,41 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
       new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
   );
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [page, setPage] = useState(1);
 
   // Get unique categories
   const categories = Array.from(
     new Set(sorted.map((a) => a.metadata.category).filter(Boolean))
   ) as string[];
 
-  // Hero article is the most recent
-  const [hero, ...rest] = sorted;
+  // Hero article is the most recent (or most recent in selected category)
+  const filtered = selectedCategory
+    ? sorted.filter((a) => a.metadata.category === selectedCategory)
+    : sorted;
+  const [hero, ...rest] = filtered;
 
-  // Filter grid by category if selected
-  const gridArticles = selectedCategory
-    ? rest.filter((a) => a.metadata.category === selectedCategory)
-    : rest;
+  // Pagination
+  const ARTICLES_PER_PAGE = 18;
+  const totalPages = Math.ceil(rest.length / ARTICLES_PER_PAGE);
+  const paginatedArticles = rest.slice(
+    (page - 1) * ARTICLES_PER_PAGE,
+    page * ARTICLES_PER_PAGE
+  );
+
+  // Reset to page 1 when category changes
+  function handleCategoryChange(cat: string | null) {
+    setSelectedCategory(cat);
+    setPage(1);
+  }
 
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-5xl px-4">
-        {/* Hero Section */}
+        {/* Insights H1 */}
+        <h1 className="text-4xl font-bold mb-8">Insights</h1>
+
+        {/* Most Recent Article */}
+        <h2 className="text-2xl font-semibold mb-4">Most Recent Article</h2>
         {hero && (
           <section className="mb-12 w-full">
             <Link href={`/insights/${hero.slug}`}>
@@ -43,24 +72,32 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                   <span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-white text-xs">
                     {hero.metadata.category}
                   </span>
-                  <h1 className="mb-2 font-bold text-3xl text-white md:text-4xl">
+                  <h2 className="mb-2 font-bold text-3xl text-white md:text-4xl">
                     {hero.metadata.title}
-                  </h1>
+                  </h2>
                   <p className="line-clamp-2 text-lg text-white">
                     {hero.metadata.description}
                   </p>
+                  <div className="mt-2 text-sm text-white/70">
+                    {hero.metadata.readingTime || "3 min read"}
+                  </div>
                 </div>
               </div>
             </Link>
           </section>
         )}
 
-        {/* Category Navigation */}
-        <nav className="mb-8 flex flex-wrap justify-center gap-2">
+        {/* Categories Signpost */}
+        <h2 className="text-xl font-semibold mb-2">Categories of articles</h2>
+        <nav className="mb-4 flex flex-wrap justify-center gap-2">
           <button
             type="button"
-            className={`rounded-full px-4 py-2 font-medium ${!selectedCategory ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}
-            onClick={() => setSelectedCategory(null)}
+            className={`rounded-full px-4 py-2 font-medium ${
+              !selectedCategory
+                ? "bg-primary text-white"
+                : "bg-muted text-muted-foreground"
+            }`}
+            onClick={() => handleCategoryChange(null)}
           >
             All
           </button>
@@ -68,17 +105,32 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
             <button
               type="button"
               key={cat}
-              className={`rounded-full px-4 py-2 font-medium ${selectedCategory === cat ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}
-              onClick={() => setSelectedCategory(cat)}
+              className={`rounded-full px-4 py-2 font-medium ${
+                selectedCategory === cat
+                  ? "bg-primary text-white"
+                  : "bg-muted text-muted-foreground"
+              }`}
+              onClick={() => handleCategoryChange(cat)}
             >
               {cat}
             </button>
           ))}
         </nav>
 
+        {/* Category Explainer */}
+        {selectedCategory && (
+          <div className="mb-6 text-center text-muted-foreground">
+            {CATEGORY_EXPLAINERS[selectedCategory] || (
+              <span>
+                [Add a description for <b>{selectedCategory}</b> here.]
+              </span>
+            )}
+          </div>
+        )}
+
         {/* Article Grid */}
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {gridArticles.map((article) => (
+          {paginatedArticles.map((article) => (
             <Link
               key={article.slug}
               href={`/insights/${article.slug}`}
@@ -95,13 +147,36 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                 <span className="mb-2 inline-block rounded bg-primary/10 px-2 py-1 text-primary text-xs">
                   {article.metadata.category}
                 </span>
-                <h2 className="line-clamp-2 font-semibold text-lg">
-                  {article.metadata.title}
-                </h2>
+                <h3 className="font-semibold text-lg mb-1">{article.metadata.title}</h3>
+                <div className="text-xs text-muted-foreground">
+                  {article.metadata.readingTime || "3 min read"}
+                </div>
               </div>
             </Link>
           ))}
         </section>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center gap-2 mt-10">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                type="button"
+                className={`px-3 py-1 rounded ${
+                  page === i + 1
+                    ? "bg-primary text-white"
+                    : "bg-muted text-muted-foreground"
+                }`}
+                onClick={() => setPage(i + 1)}
+                // Prevent scroll to top
+                style={{ scrollBehavior: "auto" }}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
