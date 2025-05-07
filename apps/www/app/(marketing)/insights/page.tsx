@@ -26,7 +26,7 @@ export default async function InsightsPage({
     ? insights.filter(
         (article) =>
           article.metadata.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          article.metadata.category?.toLowerCase().includes(searchQuery.toLowerCase())
+          (article.metadata.category?.toLowerCase().includes(searchQuery.toLowerCase()) ?? false)
       )
     : insights
 
@@ -72,7 +72,7 @@ export default async function InsightsPage({
         <div className="mb-16">
           <h2 className="text-2xl font-semibold mb-8">Recent Articles</h2>
           <div className="grid gap-8">
-            {recentArticles.map((article: Content) => (
+            {recentArticles.map((article) => (
               <ArticleCard key={article.slug} article={article} />
             ))}
           </div>
@@ -90,7 +90,7 @@ export default async function InsightsPage({
           <div key={category} className="mb-16">
             <h2 className="text-2xl font-semibold mb-8">{category}</h2>
             <div className="grid gap-8">
-              {articlesByCategory[category].map((article: Content) => (
+              {articlesByCategory[category]?.map((article) => (
                 <ArticleCard key={article.slug} article={article} />
               ))}
             </div>
