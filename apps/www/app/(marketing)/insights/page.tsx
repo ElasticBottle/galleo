@@ -4,6 +4,7 @@ import { type Content, getAllContent } from "~/lib/mdx"
 import { Section } from "../_components/section"
 import { SearchInput } from "./_components/search-input"
 import { Pagination } from "./_components/pagination"
+import { useState } from "react"
 
 export const metadata: Metadata = {
   title: "Insights",
@@ -27,125 +28,102 @@ export default async function InsightsPage({
 }: {
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
-  const insights = await getAllContent('insights')
-  const searchQuery = getParam(searchParams, "q")
-  const recentPage = Number(getParam(searchParams, "recentPage")) || 1
-  const itemsPerPage = 3
-
-  // Filter insights based on search query
-  const filteredInsights = searchQuery
-    ? insights.filter(
-        (article) =>
-          article.metadata.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          (article.metadata.category?.toLowerCase().includes(searchQuery.toLowerCase()) ?? false)
-      )
-    : insights
+  const articles = await getAllContent('insights')
+  // Sort by date descending
+  const sorted = [...articles].sort((a, b) =>
+    new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
+  )
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   // Get unique categories
   const categories = Array.from(
-    new Set(filteredInsights.map((article) => article.metadata.category))
-  ).filter(Boolean) as string[]
+    new Set(sorted.map((a) => a.metadata.category).filter(Boolean))
+  ) as string[]
 
-  // Get recent articles
-  const recentArticles = filteredInsights.slice(
-    (recentPage - 1) * itemsPerPage,
-    recentPage * itemsPerPage
-  )
+  // Hero article is the most recent
+  const [hero, ...rest] = sorted
 
-  // Get articles by category
-  const articlesByCategory = categories.reduce((acc, category) => {
-    const categoryPage = Number(getParam(searchParams, `categoryPage-${category}`)) || 1;
-    const categoryArticles = filteredInsights.filter(
-      (article) => article.metadata.category === category
-    ).slice(
-      (categoryPage - 1) * itemsPerPage,
-      categoryPage * itemsPerPage
-    );
-    acc[category] = categoryArticles;
-    return acc;
-  }, {} as Record<string, Content[]>)
+  // Filter grid by category if selected
+  const gridArticles = selectedCategory
+    ? rest.filter((a) => a.metadata.category === selectedCategory)
+    : rest
 
   return (
     <Section className="py-16">
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            Insights
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore our collection of insights on the latest developments in IP law, AI, and the intersection of law and AI
-          </p>
-        </div>
-
-        {/* Search Input */}
-        <div className="mb-16 max-w-2xl mx-auto">
-          <SearchInput />
-        </div>
-
-        {/* Recent Articles Section */}
-        <div className="mb-20">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-semibold">Recent Articles</h2>
-            <div className="h-px flex-1 bg-border mx-4" />
-          </div>
-          <div className="grid gap-8">
-            {recentArticles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
-          <Pagination
-            currentPage={recentPage}
-            totalItems={filteredInsights.length}
-            itemsPerPage={itemsPerPage}
-            baseUrl="/insights"
-            pageParam="recentPage"
-            category=""
-          />
-        </div>
-
-        {/* Category Sections */}
-        {categories.map((category) => {
-          const categoryPage = Number(getParam(searchParams, `categoryPage-${category}`)) || 1;
-
-          // Get paginated articles for this category
-          const categoryArticles = filteredInsights
-            .filter((article) => article.metadata.category === category)
-            .slice(
-              (categoryPage - 1) * itemsPerPage,
-              categoryPage * itemsPerPage
-            );
-
-          return (
-            <div key={category} className="mb-20">
-              <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl font-semibold">{category}</h2>
-                <div className="h-px flex-1 bg-border mx-4" />
-              </div>
-              <div className="grid gap-8">
-                {categoryArticles.length > 0 ? (
-                  categoryArticles.map((article) => (
-                    <ArticleCard key={article.slug} article={article} />
-                  ))
-                ) : (
-                  <div className="text-muted-foreground italic py-8 text-center">
-                    No articles yet in this category.
-                  </div>
+        {hero && (
+          <section className="w-full mb-12">
+            <Link href={`/insights/${hero.slug}`}>
+              <div className="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+                {hero.metadata.image && (
+                  <img
+                    src={hero.metadata.image}
+                    alt={hero.metadata.title}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 )}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                  <span className="inline-block bg-primary text-white text-xs px-3 py-1 rounded-full mb-2">
+                    {hero.metadata.category}
+                  </span>
+                  <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                    {hero.metadata.title}
+                  </h1>
+                  <p className="text-white text-lg line-clamp-2">
+                    {hero.metadata.description}
+                  </p>
+                </div>
               </div>
-              <Pagination
-                currentPage={categoryPage}
-                totalItems={filteredInsights.filter(
-                  (article) => article.metadata.category === category
-                ).length}
-                itemsPerPage={itemsPerPage}
-                baseUrl="/insights"
-                pageParam={`categoryPage-${category}`}
-                category={category}
-              />
-            </div>
-          );
-        })}
+            </Link>
+          </section>
+        )}
+
+        {/* Category Navigation */}
+        <nav className="flex gap-2 mb-8 justify-center flex-wrap">
+          <button
+            className={`px-4 py-2 rounded-full font-medium ${!selectedCategory ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}
+            onClick={() => setSelectedCategory(null)}
+          >
+            All
+          </button>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`px-4 py-2 rounded-full font-medium ${selectedCategory === cat ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </nav>
+
+        {/* Article Grid */}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {gridArticles.map((article) => (
+            <Link
+              key={article.slug}
+              href={`/insights/${article.slug}`}
+              className="block rounded-lg border border-border bg-white dark:bg-white/5 hover:shadow-lg transition"
+            >
+              {article.metadata.image && (
+                <img
+                  src={article.metadata.image}
+                  alt={article.metadata.title}
+                  className="w-full h-40 object-cover rounded-t-lg"
+                />
+              )}
+              <div className="p-4">
+                <span className="inline-block bg-primary/10 text-primary text-xs px-2 py-1 rounded mb-2">
+                  {article.metadata.category}
+                </span>
+                <h2 className="text-lg font-semibold line-clamp-2">
+                  {article.metadata.title}
+                </h2>
+              </div>
+            </Link>
+          ))}
+        </section>
       </div>
     </Section>
   )
