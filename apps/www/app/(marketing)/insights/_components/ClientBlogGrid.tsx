@@ -53,8 +53,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
     <section className="py-16">
       <div className="container mx-auto max-w-5xl px-4">
         {/* Insights H1 */}
-        <h1 className="text-4xl font-bold mb-8 text-center">Insights</h1>
-
+        <h1 className="text-4xl font-bold mb-8 text-center" style={{ color: 'hsl(var(--primary))' }}>Insights</h1>
         {/* Most Recent Article */}
         <h2 className="text-2xl font-semibold mb-4 text-center">Most Recent Article</h2>
         {hero && (
