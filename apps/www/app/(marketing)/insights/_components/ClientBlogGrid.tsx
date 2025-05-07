@@ -6,11 +6,11 @@ import { type Content } from "~/lib/mdx";
 // Category explainers (fill in as needed)
 const CATEGORY_EXPLAINERS: Record<string, string> = {
   "AI Legal Developments":
-    "Covers legal cases, regulations, and news about the future of AI, including how AI is used, trained, and governed.",
+    "Stay informed on the legal frontlines of artificial intelligence. Get the latest on key cases, regulations, and the critical discussions shaping the future of AI's use and governance",
   "Transforming Law with AI":
-    "Explores how AI is changing legal practice, from automation to new business models.",
+    "Explore the cutting edge of legal innovation. Learn how AI is revolutionizing legal practice, from automating tasks to creating entirely new ways of delivering services",
   "Trademark Basics":
-    "Guides and tips for understanding and managing trademarks in the modern world.",
+    "Protect your brand's core identity. Discover essential guides and practical advice on understanding, securing, and managing your trademarks for business success in today's market.",
   // Add more as needed, or use a placeholder:
   // "Other Category": "Description for this category.",
 };
@@ -88,7 +88,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
         )}
 
         {/* Categories Signpost */}
-        <h2 className="text-xl font-semibold mb-2 text-center">Article Categories</h2>
+        <h2 className="text-xl font-semibold mb-2 text-center py-4">Article Categories</h2>
         <nav className="mb-4 flex flex-wrap justify-center gap-2">
           <button
             type="button"
