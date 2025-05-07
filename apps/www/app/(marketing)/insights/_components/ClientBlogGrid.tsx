@@ -30,11 +30,10 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
   ) as string[];
 
   // Hero article is the most recent (or most recent in selected category)
-  const filtered = selectedCategory
+  const hero = sorted[0];
+  const gridArticles = selectedCategory
     ? sorted.filter((a) => a.metadata.category === selectedCategory)
     : sorted;
-  const hero = filtered[0];
-  const gridArticles = filtered;
 
   // Pagination
   const ARTICLES_PER_PAGE = 18;
