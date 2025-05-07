@@ -64,26 +64,21 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                   <img
                     src={hero.metadata.image}
                     alt={hero.metadata.title}
-                    className="h-80 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full object-cover"
+                    style={{ maxHeight: 400, minHeight: 200 }}
                   />
                 )}
-                <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent p-4">
                   <span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-white text-xs">
                     {hero.metadata.category}
                   </span>
                   <h2
-                    className="
-                      mb-2 font-bold text-3xl text-white md:text-4xl
-                      break-words
-                      whitespace-normal
-                      sm:text-3xl
-                      text-2xl
-                    "
+                    className="font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-2 break-words whitespace-normal"
                     style={{ wordBreak: "break-word" }}
                   >
                     {hero.metadata.title}
                   </h2>
-                  <p className="line-clamp-2 text-lg text-white">
+                  <p className="text-white text-base sm:text-lg line-clamp-2">
                     {hero.metadata.description}
                   </p>
                   <div className="mt-2 text-sm text-white/70">
