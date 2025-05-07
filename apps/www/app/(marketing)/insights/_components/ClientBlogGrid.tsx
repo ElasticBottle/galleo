@@ -71,7 +71,16 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                   <span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-white text-xs">
                     {hero.metadata.category}
                   </span>
-                  <h2 className="mb-2 font-bold text-3xl text-white md:text-4xl">
+                  <h2
+                    className="
+                      mb-2 font-bold text-3xl text-white md:text-4xl
+                      break-words
+                      whitespace-normal
+                      sm:text-3xl
+                      text-2xl
+                    "
+                    style={{ wordBreak: "break-word" }}
+                  >
                     {hero.metadata.title}
                   </h2>
                   <p className="line-clamp-2 text-lg text-white">
