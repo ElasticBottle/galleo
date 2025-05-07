@@ -11,6 +11,7 @@ interface PaginationProps {
   itemsPerPage: number
   baseUrl: string
   pageParam: string
+  category: string
 }
 
 export function Pagination({
@@ -19,6 +20,7 @@ export function Pagination({
   itemsPerPage,
   baseUrl,
   pageParam,
+  category,
 }: PaginationProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -32,6 +34,8 @@ export function Pagination({
     },
     [searchParams]
   )
+
+  const categoryPage = Number(searchParams[`categoryPage-${category}`]) || 1;
 
   if (totalPages <= 1) return null
 
@@ -73,8 +77,9 @@ export function Pagination({
           variant={currentPage === pageNum ? "default" : "outline"}
           size="sm"
           onClick={() => {
-            router.push(
-              `${baseUrl}?${createQueryString(pageParam, String(pageNum))}`
+            router.replace(
+              `${baseUrl}?${createQueryString(pageParam, String(pageNum))}`,
+              { scroll: false }
             )
           }}
         >
