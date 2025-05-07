@@ -1,8 +1,9 @@
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { Button } from '@galleo/ui/components/base/button'
+import { Input } from '@galleo/ui/components/base/input'
 
 interface PaginationProps {
   currentPage: number
