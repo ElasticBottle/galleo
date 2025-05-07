@@ -56,21 +56,27 @@ export default async function InsightsPage({
   return (
     <Section className="py-16">
       <div className="container mx-auto px-4 max-w-5xl">
-        <div className="flex items-baseline justify-between mb-12">
-          <h1 className="text-4xl font-bold">Insights</h1>
-          <p className="text-muted-foreground">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            Insights
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore our collection of insights on the latest developments in IP law, AI, and the intersection of law and AI
           </p>
         </div>
 
         {/* Search Input */}
-        <div className="mb-12">
+        <div className="mb-16 max-w-2xl mx-auto">
           <SearchInput />
         </div>
 
         {/* Recent Articles Section */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-8">Recent Articles</h2>
+        <div className="mb-20">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-semibold">Recent Articles</h2>
+            <div className="h-px flex-1 bg-border mx-4" />
+          </div>
           <div className="grid gap-8">
             {recentArticles.map((article) => (
               <ArticleCard key={article.slug} article={article} />
@@ -87,8 +93,11 @@ export default async function InsightsPage({
 
         {/* Category Sections */}
         {categories.map((category) => (
-          <div key={category} className="mb-16">
-            <h2 className="text-2xl font-semibold mb-8">{category}</h2>
+          <div key={category} className="mb-20">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-semibold">{category}</h2>
+              <div className="h-px flex-1 bg-border mx-4" />
+            </div>
             <div className="grid gap-8">
               {articlesByCategory[category]?.map((article) => (
                 <ArticleCard key={article.slug} article={article} />
@@ -110,12 +119,12 @@ export default async function InsightsPage({
   )
 }
 
-// Article Card Component
+// Enhanced Article Card Component
 function ArticleCard({ article }: { article: Content }) {
   return (
     <Link 
       href={`/insights/${article.slug}`}
-      className="group block bg-white dark:bg-white/5 rounded-lg border border-border hover:border-border-hover transition-colors overflow-hidden"
+      className="group block bg-white dark:bg-white/5 rounded-xl border border-border hover:border-border-hover transition-all duration-300 overflow-hidden hover:shadow-lg"
     >
       <div className="flex flex-col md:flex-row">
         {article.metadata.image && (
@@ -124,16 +133,16 @@ function ArticleCard({ article }: { article: Content }) {
               <img 
                 src={article.metadata.image} 
                 alt={article.metadata.title}
-                className="object-cover absolute inset-0 w-full h-full"
+                className="object-cover absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           </div>
         )}
         <div className="p-8 md:w-2/3">
-          <div className="uppercase tracking-wider text-xs text-muted-foreground mb-3">
+          <div className="uppercase tracking-wider text-xs font-medium text-primary mb-3">
             {article.metadata.category || "INSIGHTS"}
           </div>
-          <h2 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
+          <h2 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
             {article.metadata.title}
           </h2>
           <p className="text-muted-foreground mb-6 line-clamp-2">
@@ -141,14 +150,32 @@ function ArticleCard({ article }: { article: Content }) {
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             {article.metadata.author && (
-              <span>{article.metadata.author}</span>
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                {article.metadata.author}
+              </span>
             )}
             {article.metadata.date && (
-              <time dateTime={article.metadata.date}>
+              <time dateTime={article.metadata.date} className="flex items-center gap-2">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
                 {new Date(article.metadata.date).toLocaleDateString()}
               </time>
             )}
-            <span>{article.metadata.readingTime || "3 min read"}</span>
+            <span className="flex items-center gap-2">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              {article.metadata.readingTime || "3 min read"}
+            </span>
           </div>
         </div>
       </div>

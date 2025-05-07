@@ -34,10 +34,28 @@ export function Pagination({
 
   if (totalPages <= 1) return null
 
+  // Generate page numbers to show
+  const getPageNumbers = () => {
+    const pages = []
+    const maxVisiblePages = 5
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2))
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1)
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1)
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(i)
+    }
+    return pages
+  }
+
   return (
-    <div className="flex justify-center gap-2 mt-8">
+    <div className="flex items-center justify-center gap-2 mt-8">
       <Button
         variant="outline"
+        size="sm"
         onClick={() => {
           router.push(
             `${baseUrl}?${createQueryString(pageParam, String(currentPage - 1))}`
@@ -47,11 +65,25 @@ export function Pagination({
       >
         Previous
       </Button>
-      <span className="flex items-center px-4">
-        Page {currentPage} of {totalPages}
-      </span>
+
+      {getPageNumbers().map((pageNum) => (
+        <Button
+          key={pageNum}
+          variant={currentPage === pageNum ? "default" : "outline"}
+          size="sm"
+          onClick={() => {
+            router.push(
+              `${baseUrl}?${createQueryString(pageParam, String(pageNum))}`
+            )
+          }}
+        >
+          {pageNum}
+        </Button>
+      ))}
+
       <Button
         variant="outline"
+        size="sm"
         onClick={() => {
           router.push(
             `${baseUrl}?${createQueryString(pageParam, String(currentPage + 1))}`
