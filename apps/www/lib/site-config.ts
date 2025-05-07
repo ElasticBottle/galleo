@@ -32,6 +32,12 @@ export const siteConfig: SiteConfig = {
     },
     {
       variant: "button",
+      buttonVariant: "navigation",
+      href: "/reliti",
+      label: "ReLiti",
+    },
+    {
+      variant: "button",
       buttonVariant: "default",
       target: "_blank",
       href: ROUTE_CONTACT_US,
