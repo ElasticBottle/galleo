@@ -1,43 +1,41 @@
-import { Metadata } from "next"
-import { MDXRemote } from "next-mdx-remote/rsc"
-import { getContentBySlug } from "~/lib/mdx"
-import { Section } from "../../_components/section"
+import type { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getContentBySlug } from "~/lib/mdx";
+import { Section } from "../../_components/section";
 
 interface Props {
   params: {
-    slug: string
-  }
+    slug: string;
+  };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const insight = await getContentBySlug('insights', params.slug)
-  
+  const insight = await getContentBySlug("insights", params.slug);
+
   return {
     title: `${insight.metadata.title} | Galleo`,
     description: insight.metadata.description,
-  }
+  };
 }
 
 export default async function InsightPage({ params }: Props) {
-  const insight = await getContentBySlug('insights', params.slug)
+  const insight = await getContentBySlug("insights", params.slug);
 
   return (
     <Section className="py-16">
-      <article className="container mx-auto px-4 max-w-3xl">
+      <article className="container mx-auto max-w-3xl px-4">
         <header className="mb-8">
           {insight.metadata.category && (
-            <div className="uppercase tracking-wider text-sm text-muted-foreground mb-4">
+            <div className="mb-4 text-muted-foreground text-sm uppercase tracking-wider">
               {insight.metadata.category}
             </div>
           )}
-          <h1 className="text-4xl font-bold mb-4">{insight.metadata.title}</h1>
-          <p className="text-xl text-muted-foreground mb-4">
+          <h1 className="mb-4 font-bold text-4xl">{insight.metadata.title}</h1>
+          <p className="mb-4 text-muted-foreground text-xl">
             {insight.metadata.description}
           </p>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            {insight.metadata.author && (
-              <span>{insight.metadata.author}</span>
-            )}
+          <div className="flex items-center gap-4 text-muted-foreground text-sm">
+            {insight.metadata.author && <span>{insight.metadata.author}</span>}
             {insight.metadata.date && (
               <time dateTime={insight.metadata.date}>
                 {new Date(insight.metadata.date).toLocaleDateString()}
@@ -50,11 +48,11 @@ export default async function InsightPage({ params }: Props) {
         </header>
 
         {insight.metadata.image && (
-          <div className="aspect-[16/9] relative overflow-hidden rounded-lg mb-8">
-            <img 
-              src={insight.metadata.image} 
+          <div className="relative mb-8 aspect-[16/9] overflow-hidden rounded-lg">
+            <img
+              src={insight.metadata.image}
               alt={insight.metadata.title}
-              className="object-cover w-full h-full"
+              className="h-full w-full object-cover"
             />
           </div>
         )}
@@ -64,5 +62,5 @@ export default async function InsightPage({ params }: Props) {
         </div>
       </article>
     </Section>
-  )
-} 
+  );
+}

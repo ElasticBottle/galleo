@@ -30,7 +30,7 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-3 md:px-4">
         <BrandButton />
 
-        <div className="hidden lg:flex flex-1 justify-center">
+        <div className="hidden flex-1 justify-center lg:flex">
           <NavigationLinks />
         </div>
 

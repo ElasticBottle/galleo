@@ -7,16 +7,20 @@ import { type HeaderButtonConfig, siteConfig } from "~/lib/site-config";
 
 export function ActionButtons() {
   const actionItems = siteConfig.header
-    .filter((item): item is HeaderButtonConfig => 
-      item.variant === "button" && item.buttonVariant !== "navigation"
+    .filter(
+      (item): item is HeaderButtonConfig =>
+        item.variant === "button" && item.buttonVariant !== "navigation",
     )
     .map((item) => (
       <Link
         key={item.label}
         href={item.href}
         data-attr={`header-button-${item.label}`}
-        className={buttonVariants({ 
-          variant: item.buttonVariant === "navigation" ? "default" : item.buttonVariant 
+        className={buttonVariants({
+          variant:
+            item.buttonVariant === "navigation"
+              ? "default"
+              : item.buttonVariant,
         })}
         target={item.target}
       >
@@ -30,4 +34,4 @@ export function ActionButtons() {
       <ThemeToggle />
     </div>
   );
-} 
+}

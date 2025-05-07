@@ -6,15 +6,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@galleo/ui/components/base/navigation-menu";
-import { cn } from "@galleo/ui/utils/cn";
 import Link from "next/link";
 import { type HeaderButtonConfig, siteConfig } from "~/lib/site-config";
 
 export function NavigationLinks() {
-  const navigationItems = siteConfig.header
-    .filter((item): item is HeaderButtonConfig => 
-      item.variant === "button" && item.buttonVariant === "navigation"
-    );
+  const navigationItems = siteConfig.header.filter(
+    (item): item is HeaderButtonConfig =>
+      item.variant === "button" && item.buttonVariant === "navigation",
+  );
 
   return (
     <NavigationMenu>
@@ -25,7 +24,7 @@ export function NavigationLinks() {
               <Link
                 href={item.href}
                 data-attr={`header-button-${item.label}`}
-                className="px-4 py-2 text-base transition-colors hover:bg-blue-50 dark:hover:bg-blue-950 rounded-md"
+                className="rounded-md px-4 py-2 text-base transition-colors hover:bg-blue-50 dark:hover:bg-blue-950"
                 target={item.target}
               >
                 {item.label}
@@ -36,4 +35,4 @@ export function NavigationLinks() {
       </NavigationMenuList>
     </NavigationMenu>
   );
-} 
+}
