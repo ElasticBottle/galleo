@@ -21,15 +21,13 @@ export default function ReLitiPage() {
                 Instantly automate the tedious 'download now' clicks on E-Litigation. Install ReLiti and reclaim valuable time for critical legal work – it's simple and free.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 text-white hover:bg-blue-700"
-                  asChild
+                <Link
+                  href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+                  target="_blank"
+                  className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-6 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  <Link href="https://chrome.google.com/webstore/detail/reliti/your-extension-id" target="_blank">
-                    Add ReLiti to Chrome & Save Time Now!
-                  </Link>
-                </Button>
+                  Add ReLiti to Chrome & Save Time Now!
+                </Link>
               </div>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-lg">
@@ -135,26 +133,20 @@ export default function ReLitiPage() {
               Ready to Reclaim Your Time? Download ReLiti Today - It's Free!
             </h2>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white text-blue-600 hover:bg-gray-100"
-                asChild
+              <Link
+                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+                target="_blank"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-white px-6 text-base font-medium text-blue-600 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
               >
-                <Link href="https://chrome.google.com/webstore/detail/reliti/your-extension-id" target="_blank">
-                  Add ReLiti to Chrome & Start Saving Now!
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-blue-700"
-                asChild
+                Add ReLiti to Chrome & Start Saving Now!
+              </Link>
+              <Link
+                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+                target="_blank"
+                className="inline-flex h-12 items-center justify-center rounded-md border border-white px-6 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
               >
-                <Link href="https://chrome.google.com/webstore/detail/reliti/your-extension-id" target="_blank">
-                  Get ReLiti on the Chrome Web Store
-                </Link>
-              </Button>
+                Get ReLiti on the Chrome Web Store
+              </Link>
             </div>
           </div>
         </div>
