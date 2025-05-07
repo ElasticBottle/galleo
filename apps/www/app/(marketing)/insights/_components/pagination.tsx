@@ -35,7 +35,7 @@ export function Pagination({
     [searchParams]
   )
 
-  const categoryPage = Number(searchParams[`categoryPage-${category}`]) || 1;
+  const categoryPage = Number(searchParams.get(`categoryPage-${category}`)) || 1;
 
   if (totalPages <= 1) return null
 

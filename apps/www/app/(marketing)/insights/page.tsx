@@ -10,15 +10,26 @@ export const metadata: Metadata = {
   description: "Explore our collection of insights on the latest developments in IP law, AI, and the intersection of law and AI",
 }
 
+function getParam(
+  searchParams: { [key: string]: string | string[] | undefined },
+  key: string
+): string | undefined {
+  if (typeof (searchParams as any).get === "function") {
+    return (searchParams as any).get(key);
+  }
+  const val = searchParams[key];
+  if (Array.isArray(val)) return val[0];
+  return val;
+}
+
 export default async function InsightsPage({
   searchParams,
 }: {
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const insights = await getAllContent('insights')
-  const searchQuery = searchParams.q as string | undefined
-  const recentPage = Number(searchParams.recentPage) || 1
-  const categoryPage = Number(searchParams.categoryPage) || 1
+  const searchQuery = getParam(searchParams, "q")
+  const recentPage = Number(getParam(searchParams, "recentPage")) || 1
   const itemsPerPage = 3
 
   // Filter insights based on search query
@@ -43,14 +54,15 @@ export default async function InsightsPage({
 
   // Get articles by category
   const articlesByCategory = categories.reduce((acc, category) => {
+    const categoryPage = Number(getParam(searchParams, `categoryPage-${category}`)) || 1;
     const categoryArticles = filteredInsights.filter(
       (article) => article.metadata.category === category
-    )
-    acc[category] = categoryArticles.slice(
+    ).slice(
       (categoryPage - 1) * itemsPerPage,
       categoryPage * itemsPerPage
-    )
-    return acc
+    );
+    acc[category] = categoryArticles;
+    return acc;
   }, {} as Record<string, Content[]>)
 
   return (
@@ -88,32 +100,52 @@ export default async function InsightsPage({
             itemsPerPage={itemsPerPage}
             baseUrl="/insights"
             pageParam="recentPage"
+            category=""
           />
         </div>
 
         {/* Category Sections */}
-        {categories.map((category) => (
-          <div key={category} className="mb-20">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-semibold">{category}</h2>
-              <div className="h-px flex-1 bg-border mx-4" />
+        {categories.map((category) => {
+          const categoryPage = Number(getParam(searchParams, `categoryPage-${category}`)) || 1;
+
+          // Get paginated articles for this category
+          const categoryArticles = filteredInsights
+            .filter((article) => article.metadata.category === category)
+            .slice(
+              (categoryPage - 1) * itemsPerPage,
+              categoryPage * itemsPerPage
+            );
+
+          return (
+            <div key={category} className="mb-20">
+              <div className="flex items-center justify-between mb-8">
+                <h2 className="text-3xl font-semibold">{category}</h2>
+                <div className="h-px flex-1 bg-border mx-4" />
+              </div>
+              <div className="grid gap-8">
+                {categoryArticles.length > 0 ? (
+                  categoryArticles.map((article) => (
+                    <ArticleCard key={article.slug} article={article} />
+                  ))
+                ) : (
+                  <div className="text-muted-foreground italic py-8 text-center">
+                    No articles yet in this category.
+                  </div>
+                )}
+              </div>
+              <Pagination
+                currentPage={categoryPage}
+                totalItems={filteredInsights.filter(
+                  (article) => article.metadata.category === category
+                ).length}
+                itemsPerPage={itemsPerPage}
+                baseUrl="/insights"
+                pageParam={`categoryPage-${category}`}
+                category={category}
+              />
             </div>
-            <div className="grid gap-8">
-              {articlesByCategory[category]?.map((article) => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
-            </div>
-            <Pagination
-              currentPage={categoryPage}
-              totalItems={filteredInsights.filter(
-                (article) => article.metadata.category === category
-              ).length}
-              itemsPerPage={itemsPerPage}
-              baseUrl="/insights"
-              pageParam="categoryPage"
-            />
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Section>
   )
