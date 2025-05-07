@@ -9,15 +9,6 @@ interface Props {
   };
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const insight = await getContentBySlug("insights", params.slug);
-
-  return {
-    title: `${insight.metadata.title} | Galleo`,
-    description: insight.metadata.description,
-  };
-}
-
 export default async function InsightPage({ params }: Props) {
   const insight = await getContentBySlug("insights", params.slug);
 
