@@ -33,12 +33,13 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
   const filtered = selectedCategory
     ? sorted.filter((a) => a.metadata.category === selectedCategory)
     : sorted;
-  const [hero, ...rest] = filtered;
+  const hero = filtered[0];
+  const gridArticles = filtered;
 
   // Pagination
   const ARTICLES_PER_PAGE = 18;
-  const totalPages = Math.ceil(rest.length / ARTICLES_PER_PAGE);
-  const paginatedArticles = rest.slice(
+  const totalPages = Math.ceil(gridArticles.length / ARTICLES_PER_PAGE);
+  const paginatedArticles = gridArticles.slice(
     (page - 1) * ARTICLES_PER_PAGE,
     page * ARTICLES_PER_PAGE
   );
@@ -53,10 +54,10 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
     <section className="py-16">
       <div className="container mx-auto max-w-5xl px-4">
         {/* Insights H1 */}
-        <h1 className="text-4xl font-bold mb-8">Insights</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Insights</h1>
 
         {/* Most Recent Article */}
-        <h2 className="text-2xl font-semibold mb-4">Most Recent Article</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-center">Most Recent Article</h2>
         {hero && (
           <section className="mb-12 w-full">
             <Link href={`/insights/${hero.slug}`}>
@@ -88,7 +89,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
         )}
 
         {/* Categories Signpost */}
-        <h2 className="text-xl font-semibold mb-2">Categories of articles</h2>
+        <h2 className="text-xl font-semibold mb-2 text-center">Article Categories</h2>
         <nav className="mb-4 flex flex-wrap justify-center gap-2">
           <button
             type="button"
@@ -130,7 +131,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
 
         {/* Article Grid */}
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {paginatedArticles.map((article) => (
+          {gridArticles.map((article) => (
             <Link
               key={article.slug}
               href={`/insights/${article.slug}`}
