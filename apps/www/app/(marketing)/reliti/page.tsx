@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@galleo/ui/components/base/button";
 import { Icons } from "@galleo/ui/icon";
 import { cn } from "@galleo/ui/utils/cn";
 import Image from "next/image";
@@ -10,15 +9,15 @@ export default function ReLitiPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-20 dark:from-blue-950 dark:to-background">
+      <section className="relative overflow-hidden bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="flex flex-col justify-center space-y-8">
               <h1 className="font-playfair text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-                Stop Wasting Precious Legal Hours on E-Litigation Downloads. Automate with ReLiti.
+                Click Once. ReLiti Does The Rest.
               </h1>
               <p className="text-xl text-muted-foreground">
-                Instantly automate the tedious 'download now' clicks on E-Litigation. Install ReLiti and reclaim valuable time for critical legal work – it's simple and free.
+                ReLiti automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
@@ -26,12 +25,12 @@ export default function ReLitiPage() {
                   target="_blank"
                   className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-6 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Add ReLiti to Chrome & Save Time Now!
+                  Get ReLiti & Reclaim Your Time
                 </Link>
               </div>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-lg">
-              {/* Replace with actual video or GIF */}
+              {/* Replace with actual split-screen GIF */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <p className="text-lg text-muted-foreground">Demo GIF Coming Soon</p>
@@ -46,11 +45,25 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              The Time Sink is Real: Hours Lost in Repetitive Clicks
+              Valuable time, squandered clicking.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Manually downloading court search results from E-Litigation is a significant drain on productivity for legal professionals. The endless clicking steals valuable time that could be spent on analysis, client communication, and strategic thinking. ReLiti is the intelligent Chrome extension engineered by Galleo AI to eliminate this bottleneck. It automates the repetitive clicking, allowing you to retrieve the necessary documents effortlessly and efficiently.
+              Every hour spent manually clicking on E-Litigation is an hour taken away from crucial legal work.
             </p>
+            <div className="mt-12 flex justify-center space-x-8">
+              <div className="flex flex-col items-center">
+                <div className="mb-4 rounded-full bg-red-100 p-4 dark:bg-red-900">
+                  <Icons.refresh className="h-8 w-8 text-red-600 dark:text-red-400" />
+                </div>
+                <p className="text-sm text-muted-foreground">Manual Clicking</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="mb-4 rounded-full bg-green-100 p-4 dark:bg-green-900">
+                  <Icons.bot className="h-8 w-8 text-green-600 dark:text-green-400" />
+                </div>
+                <p className="text-sm text-muted-foreground">ReLiti Automation</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -60,8 +73,11 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Effortless Automation: Watch How ReLiti Works (It's This Simple!)
+              One Click to Automation.
             </h2>
+            <p className="mt-6 text-lg text-muted-foreground">
+              See how easy it is to automate your E-Litigation downloads. Just one click, and the tedious work is done for you.
+            </p>
             <div className="mt-12 aspect-video overflow-hidden rounded-lg">
               {/* Replace with actual video embed */}
               <div className="relative h-full w-full bg-gray-200 dark:bg-gray-800">
@@ -79,39 +95,39 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Unlock Unprecedented Productivity and Reclaim Your Focus
+              Stop Clicking. Start Focusing.
             </h2>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   icon: <Icons.refresh className="h-6 w-6" />,
-                  title: "Instant Time Savings",
-                  description: "Reclaim hours each week by automating a tedious task",
+                  title: "Reclaim Hours",
+                  description: "Save valuable time for meaningful legal work",
                 },
                 {
                   icon: <Icons.bot className="h-6 w-6" />,
-                  title: "Boost Efficiency",
-                  description: "Streamline your workflow and get the data you need faster",
+                  title: "Boost Productivity",
+                  description: "Focus on analysis and strategy, not clicking",
                 },
                 {
                   icon: <Icons.thumbsUp className="h-6 w-6" />,
-                  title: "Reduce Errors & Frustration",
-                  description: "Eliminate the manual clicking and potential for mistakes",
+                  title: "Eliminate Tedium",
+                  description: "No more repetitive manual downloads",
                 },
                 {
                   icon: <Icons.edit className="h-6 w-6" />,
-                  title: "Seamless Integration",
-                  description: "Works flawlessly within your existing workflow",
+                  title: "Seamless E-Liti",
+                  description: "Works perfectly with your existing workflow",
                 },
                 {
                   icon: <Icons.logo className="h-6 w-6" />,
-                  title: "Galleo AI Powered",
-                  description: "Trust a team dedicated to innovative legal tech solutions",
+                  title: "Built for Legal Innovation",
+                  description: "Powered by Galleo AI's expertise",
                 },
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center rounded-lg border bg-card p-6 text-center shadow-sm"
+                  className="flex flex-col items-center rounded-lg border bg-card p-6 text-center shadow-sm transition-transform hover:scale-105"
                 >
                   <div className="mb-4 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
                     {benefit.icon}
@@ -130,7 +146,7 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-playfair text-3xl font-bold tracking-tight sm:text-4xl">
-              Ready to Reclaim Your Time? Download ReLiti Today - It's Free!
+              Ready to Click Less?
             </h2>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
@@ -138,14 +154,7 @@ export default function ReLitiPage() {
                 target="_blank"
                 className="inline-flex h-12 items-center justify-center rounded-md bg-white px-6 text-base font-medium text-blue-600 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
               >
-                Add ReLiti to Chrome & Start Saving Now!
-              </Link>
-              <Link
-                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
-                target="_blank"
-                className="inline-flex h-12 items-center justify-center rounded-md border border-white px-6 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-              >
-                Get ReLiti on the Chrome Web Store
+                Get ReLiti Now
               </Link>
             </div>
           </div>
