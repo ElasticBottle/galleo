@@ -65,20 +65,23 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                     src={hero.metadata.image}
                     alt={hero.metadata.title}
                     className="w-full object-cover"
-                    style={{ maxHeight: 400, minHeight: 200 }}
+                    style={{ maxHeight: 400, minHeight: 280 }}
                   />
                 )}
                 <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent p-4">
-                  <span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-white text-xs">
+                  <span className="mb-2 inline-block rounded-full bg-primary px-3 py-1 text-white text-xs w-fit">
                     {hero.metadata.category}
                   </span>
                   <h2
-                    className="font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-2 break-words whitespace-normal"
-                    style={{ wordBreak: "break-word" }}
+                    className="font-bold text-xl sm:text-2xl md:text-3xl text-white mb-2 break-words"
+                    style={{ 
+                      wordBreak: "break-word",
+                      hyphens: "auto"
+                    }}
                   >
                     {hero.metadata.title}
                   </h2>
-                  <p className="text-white text-base sm:text-lg line-clamp-2">
+                  <p className="text-white text-sm sm:text-base line-clamp-2">
                     {hero.metadata.description}
                   </p>
                   <div className="mt-2 text-sm text-white/70">
@@ -112,7 +115,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                 selectedCategory === cat
                   ? "bg-primary text-white"
                   : "bg-muted text-muted-foreground"
-              }`}
+              } w-fit`}
               onClick={() => handleCategoryChange(cat)}
             >
               {cat}
@@ -133,7 +136,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
 
         {/* Article Grid */}
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {gridArticles.map((article) => (
+          {paginatedArticles.map((article) => (
             <Link
               key={article.slug}
               href={`/insights/${article.slug}`}
@@ -147,7 +150,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                 />
               )}
               <div className="p-4">
-                <span className="mb-2 inline-block rounded bg-primary/10 px-2 py-1 text-primary text-xs">
+                <span className="mb-2 inline-block rounded bg-primary/10 px-2 py-1 text-xs text-primary w-fit">
                   {article.metadata.category}
                 </span>
                 <h3 className="font-semibold text-lg mb-1">{article.metadata.title}</h3>
@@ -171,9 +174,10 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
                     ? "bg-primary text-white"
                     : "bg-muted text-muted-foreground"
                 }`}
-                onClick={() => setPage(i + 1)}
-                // Prevent scroll to top
-                style={{ scrollBehavior: "auto" }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setPage(i + 1);
+                }}
               >
                 {i + 1}
               </button>
