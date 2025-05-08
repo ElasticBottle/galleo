@@ -11,92 +11,138 @@ export default function ReLitiPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-background py-20">
         <div className="container mx-auto px-4">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="flex flex-col justify-center space-y-8">
-              <h1 className="font-playfair text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-                Click Once. ReLiti Does The Rest.
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                ReLiti automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
-                  target="_blank"
-                  className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-6 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
-                  Get ReLiti & Reclaim Your Time
-                </Link>
-              </div>
-            </div>
-            <div className="relative aspect-video overflow-hidden rounded-lg">
-              {/* Replace with actual split-screen GIF */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-lg text-muted-foreground">Demo GIF Coming Soon</p>
-              </div>
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="font-playfair text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+              Click Once. ReLiti Does The Rest.
+            </h1>
+            <p className="mt-6 text-xl text-muted-foreground">
+              ReLiti automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <Link
+                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+                target="_blank"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-6 text-base font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Get ReLiti & Reclaim Your Time
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
-      <section className="py-20">
+      {/* Side-by-Side Comparison Section */}
+      <section className="bg-background py-20">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-4xl text-center">
             <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Valuable time, squandered clicking.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
               Every hour spent manually clicking on E-Litigation is an hour taken away from crucial legal work.
             </p>
-            <div className="mt-12 flex justify-center space-x-8">
-              <div className="flex flex-col items-center">
-                <div className="mb-4 rounded-full bg-red-100 p-4 dark:bg-red-900">
-                  <Icons.refresh className="h-8 w-8 text-red-600 dark:text-red-400" />
+            
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              {/* Without ReLiti */}
+              <div className="flex flex-col items-center rounded-lg border bg-card p-6 shadow-sm">
+                <h3 className="mb-4 text-xl font-semibold">Without ReLiti</h3>
+                <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
+                  {/* Replace with actual GIF */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Icons.refresh className="h-8 w-8 text-red-600" />
+                    <p className="ml-2 text-muted-foreground">Manual Clicking</p>
+                  </div>
                 </div>
-                <p className="text-sm text-muted-foreground">Manual Clicking</p>
+                <p className="mt-4 text-muted-foreground">
+                  Repetitive clicking and frustration as you manually download each file.
+                </p>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="mb-4 rounded-full bg-green-100 p-4 dark:bg-green-900">
-                  <Icons.bot className="h-8 w-8 text-green-600 dark:text-green-400" />
+              
+              {/* With ReLiti */}
+              <div className="flex flex-col items-center rounded-lg border bg-card p-6 shadow-sm">
+                <h3 className="mb-4 text-xl font-semibold">With ReLiti</h3>
+                <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800">
+                  {/* Replace with actual GIF */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Icons.bot className="h-8 w-8 text-green-600" />
+                    <p className="ml-2 text-muted-foreground">ReLiti Automation</p>
+                  </div>
                 </div>
-                <p className="text-sm text-muted-foreground">ReLiti Automation</p>
+                <p className="mt-4 text-muted-foreground">
+                  One click and ReLiti automatically handles all downloads for you.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Video Demo Section */}
-      <section className="bg-gray-50 py-20 dark:bg-gray-900">
+      {/* Pricing and How to Use Section */}
+      <section className="bg-background py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Simple Pricing. Easy Setup.
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground">
+              Getting started with ReLiti is quick and straightforward.
+            </p>
+            
+            <div className="mt-12 grid gap-8 sm:grid-cols-3">
+              <div className="flex flex-col items-center rounded-lg border bg-card p-6 text-center shadow-sm">
+                <div className="mb-4 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
+                  <Icons.refresh className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold">1. Install</h3>
+                <p className="text-muted-foreground">Download ReLiti from the Chrome Web Store in seconds</p>
+              </div>
+              
+              <div className="flex flex-col items-center rounded-lg border bg-card p-6 text-center shadow-sm">
+                <div className="mb-4 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
+                  <Icons.bot className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold">2. Sign In</h3>
+                <p className="text-muted-foreground">Connect with your Microsoft account</p>
+              </div>
+              
+              <div className="flex flex-col items-center rounded-lg border bg-card p-6 text-center shadow-sm">
+                <div className="mb-4 rounded-full bg-blue-100 p-3 dark:bg-blue-900">
+                  <Icons.thumbsUp className="h-6 w-6" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold">3. Start Using</h3>
+                <p className="text-muted-foreground">Navigate to E-Litigation and enjoy the automation</p>
+              </div>
+            </div>
+            
+            <div className="mt-12 rounded-lg border bg-card p-8 shadow-sm">
+              <h3 className="text-2xl font-bold">Pricing</h3>
+              <div className="mt-4 flex flex-col items-center sm:flex-row sm:justify-center">
+                <div className="text-center">
+                  <span className="text-sm text-muted-foreground">First 2 uses</span>
+                  <p className="text-2xl font-bold text-green-600">FREE</p>
+                </div>
+                <div className="mx-4 h-6 border-l border-gray-300 sm:h-12"></div>
+                <div className="text-center">
+                  <span className="text-sm text-muted-foreground">After that</span>
+                  <p className="text-2xl font-bold">$10/month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* One Click to Automation Section */}
+      <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               One Click to Automation.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              See how easy it is to automate your E-Litigation downloads. Just one click, and the tedious work is done for you.
+              Experience the value of automation with these key benefits:
             </p>
-            <div className="mt-12 aspect-video overflow-hidden rounded-lg">
-              {/* Replace with actual video embed */}
-              <div className="relative h-full w-full bg-gray-200 dark:bg-gray-800">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Icons.play className="h-16 w-16 text-gray-400" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-playfair text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Stop Clicking. Start Focusing.
-            </h2>
+            
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
@@ -123,6 +169,11 @@ export default function ReLitiPage() {
                   icon: <Icons.logo className="h-6 w-6" />,
                   title: "Built for Legal Innovation",
                   description: "Powered by Galleo AI's expertise",
+                },
+                {
+                  icon: <Icons.sun className="h-6 w-6" />,
+                  title: "Simply Better",
+                  description: "Improved experience with smart automation",
                 },
               ].map((benefit, index) => (
                 <div
