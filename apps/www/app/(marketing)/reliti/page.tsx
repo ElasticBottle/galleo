@@ -74,16 +74,12 @@ export default function ReLitiPage() {
                 <h3 className="mb-3 text-2xl font-bold text-white">Without ReLiti</h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-[#1A2734]">
                   {/* Replace with actual GIF */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="animate-pulse flex flex-col items-center text-gray-400">
-                      <svg className="mb-2 h-16 w-16 text-[#FF6B6B]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 8V16M16 12H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M12 20V20.01M7 10V10.01M17 10V10.01M7 14V14.01M17 14V14.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span>The Click Treadmill</span>
-                    </div>
-                  </div>
+                  <Image
+                    src="/without-reliti.gif"
+                    alt="Manual clicking process without ReLiti"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <p className="text-gray-300">
                   Repetitive clicking and frustration as you manually download each file. Hours lost in tedious work while critical case analysis waits.
@@ -101,15 +97,12 @@ export default function ReLitiPage() {
                 <h3 className="mb-3 text-2xl font-bold text-white">With ReLiti</h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-[#1A2734]">
                   {/* Replace with actual GIF */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex flex-col items-center text-gray-400">
-                      <svg className="mb-2 h-16 w-16 text-[#00CCFF]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 17L21 12L16 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                      <span>Effortless Automation</span>
-                    </div>
-                  </div>
+                  <Image
+                    src="/with-reliti.gif"
+                    alt="Automated downloading with ReLiti"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <p className="text-gray-300">
                   One click and ReLiti automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
