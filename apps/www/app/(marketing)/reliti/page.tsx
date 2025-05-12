@@ -6,11 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Logo component for consistent branding
-const ReLitiLogo = ({ className = "", size = "normal" }: { className?: string; size?: "small" | "normal" | "large" }) => {
+const ReLitiLogo = ({ className = "", size = "normal" }: { className?: string; size?: "small" | "normal" | "large" | "xl" }) => {
   const sizeClasses = {
     small: "h-5",
     normal: "h-7",
-    large: "h-10"
+    large: "h-10",
+    xl: "h-14"
   };
   
   return (
@@ -18,8 +19,8 @@ const ReLitiLogo = ({ className = "", size = "normal" }: { className?: string; s
       <Image 
         src="/ReLiti.png" 
         alt="ReLiti Logo" 
-        width={size === "large" ? 100 : size === "normal" ? 70 : 50}
-        height={size === "large" ? 38 : size === "normal" ? 26 : 19}
+        width={size === "xl" ? 140 : size === "large" ? 100 : size === "normal" ? 70 : 50}
+        height={size === "xl" ? 52 : size === "large" ? 38 : size === "normal" ? 26 : 19}
         className={cn(sizeClasses[size], "object-contain translate-y-[0.05em]")}
       />
     </span>
@@ -39,7 +40,7 @@ export default function ReLitiPage() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-sans text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl">
-              Click Once. <ReLitiLogo size="large" className="mx-1 -mb-1 inline-block" /> Does <span className="text-[#00CCFF]">The Rest.</span>
+              Click Once. <ReLitiLogo size="xl" className="mx-1 -mb-1 inline-block" /> Does <span className="text-[#00CCFF]">The Rest.</span>
             </h1>
             <p className="mt-8 text-xl leading-relaxed text-gray-300">
               <ReLitiLogo size="small" className="mr-1 inline-block" /> automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
@@ -51,7 +52,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-[#00CCFF] px-8 py-3 text-lg font-medium text-[#0A1929] transition-all duration-300 hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(0,204,255,0.5)]"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <ReLitiLogo size="small" className="mx-1" /> & Reclaim Your Time
+                  Get <span className="text-[#0A1929] inline-flex items-center"><ReLitiLogo size="normal" className="mx-1" /></span> & Reclaim Your Time
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -92,9 +93,8 @@ export default function ReLitiPage() {
                     <path d="M12 18.01L12.01 17.9989" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-white">Without <span className="text-[#00CCFF]"><ReLitiLogo className="ml-1 -mr-1 inline-block" /></span></h3>
+                <h3 className="mb-3 text-2xl font-bold text-white">Without <ReLitiLogo size="normal" className="ml-1 -mr-1 inline-block text-[#00CCFF]" /></h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-[#1A2734]">
-                  {/* Replace with actual GIF */}
                   <Image
                     src="/without-reliti.gif"
                     alt="Manual clicking process without ReLiti"
@@ -115,9 +115,8 @@ export default function ReLitiPage() {
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-white">With <span className="text-[#00CCFF]"><ReLitiLogo className="ml-1 -mr-1 inline-block" /></span></h3>
+                <h3 className="mb-3 text-2xl font-bold text-white">With <ReLitiLogo size="normal" className="ml-1 -mr-1 inline-block text-[#00CCFF]" /></h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-[#1A2734]">
-                  {/* Replace with actual GIF */}
                   <Image
                     src="/with-reliti.gif"
                     alt="Automated downloading with ReLiti"
@@ -126,7 +125,7 @@ export default function ReLitiPage() {
                   />
                 </div>
                 <p className="text-gray-300">
-                  One click and <span className="text-[#00CCFF]"><ReLitiLogo size="small" className="mx-0.5 inline-block" /></span> automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
+                  One click and <span className="text-[#00CCFF] inline-flex items-center -mt-1"><ReLitiLogo size="large" className="mx-1" /></span> automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
                 </p>
               </div>
             </div>
@@ -142,7 +141,7 @@ export default function ReLitiPage() {
               Simple <span className="text-[#00CCFF]">Pricing.</span> Easy <span className="text-[#00CCFF]">Setup.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-gray-300">
-              Getting started with <span className="text-[#00CCFF]"><ReLitiLogo size="small" className="mx-0.5 inline-block" /></span> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
+              Getting started with <span className="text-[#00CCFF] inline-flex items-center -mt-1"><ReLitiLogo size="normal" className="mx-1" /></span> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
             </p>
             
             <div className="mt-14 grid gap-10 sm:grid-cols-3">
@@ -160,7 +159,7 @@ export default function ReLitiPage() {
                     </div>
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-white">Install</h3>
-                  <p className="text-gray-300">Download <ReLitiLogo size="small" className="mx-0.5 inline-block" /> from the Chrome Web Store in seconds</p>
+                  <p className="text-gray-300">Download <span className="text-[#00CCFF] inline-flex items-center -mt-1"><ReLitiLogo size="normal" className="mx-1" /></span> from the Chrome Web Store in seconds</p>
                 </div>
               </div>
               
@@ -279,7 +278,7 @@ export default function ReLitiPage() {
               Ready to Click Less?
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-gray-300">
-              Join other legal professionals who've reclaimed hours of their workday with <ReLitiLogo size="small" className="mx-0.5 inline-block" />'s automation.
+              Join other legal professionals who've reclaimed hours of their workday with <span className="text-[#00CCFF] inline-flex items-center -mt-1"><ReLitiLogo size="normal" className="mx-1" /></span>'s automation.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
@@ -288,7 +287,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-[#00CCFF] px-8 py-3 text-lg font-medium text-[#0A1929] transition-all duration-300 hover:bg-opacity-90 hover:shadow-[0_0_15px_rgba(0,204,255,0.5)]"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <ReLitiLogo size="small" className="mx-0.5" /> Now
+                  Get <span className="text-[#0A1929] inline-flex items-center"><ReLitiLogo size="normal" className="mx-1" /></span> Now
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
