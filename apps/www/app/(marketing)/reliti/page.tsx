@@ -85,14 +85,14 @@ export default function ReLitiPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 delay: 3,
-                duration: 0.8,
+                duration: 0.3,
                 ease,
               }}
             >
               <Link
                 href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
                 target="_blank"
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-100 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
                   Get the ReLiti Chrome Extension Today
