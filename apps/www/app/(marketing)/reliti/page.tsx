@@ -43,8 +43,8 @@ export default function ReLitiPage() {
                 staggerChildren: 0.2,
               }}
             >
-              <motion.span
-                className="inline-block text-balance leading-[1.15] tracking-tight"
+              <motion.div
+                className="block text-balance leading-[1.15] tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -54,9 +54,9 @@ export default function ReLitiPage() {
                 }}
               >
                 Click Once.
-              </motion.span>{" "}
-              <motion.span
-                className="inline-block text-accent font-bold text-balance leading-[1.15] tracking-tight"
+              </motion.div>
+              <motion.div
+                className="mt-2 block text-balance leading-[1.15] tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -65,39 +65,15 @@ export default function ReLitiPage() {
                   ease,
                 }}
               >
-                ReLiti
-              </motion.span>{" "}
-              <motion.span
-                className="inline-block text-balance leading-[1.15] tracking-tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.4,
-                  ease,
-                }}
-              >
-                Does
-              </motion.span>{" "}
-              <motion.span
-                className="inline-block text-accent text-balance leading-[1.15] tracking-tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.6,
-                  ease,
-                }}
-              >
-                The Rest.
-              </motion.span>
+                <span className="text-accent font-bold">ReLiti</span> Does The Rest.
+              </motion.div>
             </motion.h1>
             <motion.p
               className="mt-8 text-xl leading-relaxed text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.8,
+                delay: 0.4,
                 duration: 0.8,
                 ease,
               }}
@@ -109,7 +85,7 @@ export default function ReLitiPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 1.0,
+                delay: 0.6,
                 duration: 0.8,
                 ease,
               }}
