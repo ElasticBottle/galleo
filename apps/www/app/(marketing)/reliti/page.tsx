@@ -12,11 +12,11 @@ import { useEffect, useState } from "react";
 const HeroLogo = ({ className = "" }: { className?: string }) => (
   <span className={cn("inline-block relative", className)}>
     <Image 
-      src="/ReLiti.svg" 
+      src="/ReLiti 500x500.svg" 
       alt="ReLiti Logo" 
       width={140}
-      height={52}
-      className="h-14 object-contain"
+      height={140}
+      className="h-14 w-14 object-contain"
     />
   </span>
 );
@@ -24,11 +24,11 @@ const HeroLogo = ({ className = "" }: { className?: string }) => (
 const HeadingLogo = ({ className = "" }: { className?: string }) => (
   <span className={cn("inline-block text-accent", className)}>
     <Image 
-      src="/ReLiti.svg" 
+      src="/ReLiti 160x160.svg" 
       alt="ReLiti Logo" 
       width={80}
-      height={30}
-      className="h-8 object-contain -mb-[2px]"
+      height={80}
+      className="h-8 w-8 object-contain align-middle"
     />
   </span>
 );
@@ -36,11 +36,11 @@ const HeadingLogo = ({ className = "" }: { className?: string }) => (
 const BodyLogo = ({ className = "", large = false }: { className?: string; large?: boolean }) => (
   <span className={cn("inline-block text-accent align-middle", className)}>
     <Image 
-      src="/ReLiti.png" 
+      src="/ReLiti 160x160.svg" 
       alt="ReLiti Logo" 
       width={large ? 90 : 70}
-      height={large ? 34 : 26}
-      className={cn(large ? "h-8" : "h-6", "object-contain -mb-[1px]")}
+      height={large ? 90 : 70}
+      className={cn(large ? "h-8 w-8" : "h-6 w-6", "object-contain align-middle")}
     />
   </span>
 );
@@ -48,11 +48,11 @@ const BodyLogo = ({ className = "", large = false }: { className?: string; large
 const ButtonLogo = ({ className = "", dark = false }: { className?: string; dark?: boolean }) => (
   <span className={cn("inline-block", dark ? "text-primary-bg" : "text-accent", className)}>
     <Image 
-      src="/ReLiti.svg" 
+      src="/ReLiti 160x160.svg" 
       alt="ReLiti Logo" 
       width={70}
-      height={26}
-      className="h-6 object-contain -mb-[1px]"
+      height={70}
+      className="h-6 w-6 object-contain align-middle"
     />
   </span>
 );
@@ -87,10 +87,10 @@ export default function ReLitiPage() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-sans text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-              Click Once. <HeroLogo className="mx-1" /> Does <span className="text-accent">The Rest.</span>
+              Click Once. <HeroLogo className="mx-2 inline-block" /> Does <span className="text-accent">The Rest.</span>
             </h1>
             <p className="mt-8 text-xl leading-relaxed text-muted-foreground">
-              <BodyLogo className="mr-1" /> automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
+              <BodyLogo className="mr-2 inline-block" /> automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
             </p>
             <div className="mt-10 flex justify-center">
               <Link
@@ -99,7 +99,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-accent px-8 py-3 text-lg font-medium text-primary-bg transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <ButtonLogo dark className="mx-1" /> & Reclaim Your Time
+                  Get <ButtonLogo dark className="mx-2 inline-block" /> & Reclaim Your Time
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -140,7 +140,7 @@ export default function ReLitiPage() {
                     <path d="M12 18.01L12.01 17.9989" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">Without <HeadingLogo className="ml-1" /></h3>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">Without <HeadingLogo className="ml-2 inline-block align-middle" /></h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-muted">
                   <Image
                     src="/without-reliti.gif"
@@ -162,7 +162,7 @@ export default function ReLitiPage() {
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">With <HeadingLogo className="ml-1" /></h3>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">With <HeadingLogo className="ml-2 inline-block align-middle" /></h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-muted">
                   <Image
                     src="/with-reliti.gif"
@@ -172,7 +172,7 @@ export default function ReLitiPage() {
                   />
                 </div>
                 <p className="text-muted-foreground">
-                  One click and <BodyLogo large className="mx-1" /> automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
+                  One click and <BodyLogo large className="mx-2 inline-block" /> automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
                 </p>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function ReLitiPage() {
               Simple <span className="text-accent">Pricing.</span> Easy <span className="text-accent">Setup.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Getting started with <BodyLogo className="mx-1" /> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
+              Getting started with <BodyLogo className="mx-2 inline-block" /> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
             </p>
             
             <div className="mt-14 grid gap-10 sm:grid-cols-3">
@@ -206,7 +206,7 @@ export default function ReLitiPage() {
                     </div>
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-foreground">Install</h3>
-                  <p className="text-muted-foreground">Download <BodyLogo className="mx-1" /> from the Chrome Web Store in seconds</p>
+                  <p className="text-muted-foreground">Download <BodyLogo className="mx-2 inline-block" /> from the Chrome Web Store in seconds</p>
                 </div>
               </div>
               
@@ -325,7 +325,7 @@ export default function ReLitiPage() {
               Ready to Click Less?
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Join other legal professionals who've reclaimed hours of their workday with <BodyLogo className="mx-1" />'s automation.
+              Join other legal professionals who've reclaimed hours of their workday with <BodyLogo className="mx-2 inline-block" />'s automation.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
@@ -334,7 +334,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-accent px-8 py-3 text-lg font-medium text-primary-bg transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <ButtonLogo dark className="mx-1" /> Now
+                  Get <ButtonLogo dark className="mx-2 inline-block" /> Now
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
