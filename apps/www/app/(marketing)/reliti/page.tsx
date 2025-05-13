@@ -32,10 +32,10 @@ export default function ReLitiPage() {
         <div className="container relative z-10 mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-sans text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-              Click Once. <span className="text-accent font-bold italic">ReLiti</span> Does <span className="text-accent">The Rest.</span>
+              Click Once. <span className="text-accent font-bold">ReLiti</span> Does <span className="text-accent">The Rest.</span>
             </h1>
             <p className="mt-8 text-xl leading-relaxed text-muted-foreground">
-              <span className="text-accent font-semibold italic">ReLiti</span> automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
+              <span className="text-accent font-semibold">ReLiti</span> automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
             </p>
             <div className="mt-10 flex justify-center">
               <Link
@@ -44,7 +44,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <span className="text-button font-bold italic mx-2">ReLiti</span> & Reclaim Your Time
+                  Get <span className="text-button font-bold mx-2">ReLiti</span> & Reclaim Your Time
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -77,7 +77,7 @@ export default function ReLitiPage() {
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Without ReLiti */}
-              <div className="overflow-hidden rounded-2xl border border-border bg-[#E1F5FF] dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-lg">
+              <div className="overflow-hidden rounded-2xl border border-border bg-white dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-lg">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-900/20 dark:bg-red-900/30">
                   <svg className="h-8 w-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -85,7 +85,7 @@ export default function ReLitiPage() {
                     <path d="M12 18.01L12.01 17.9989" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">Without <span className="text-accent font-bold italic ml-2">ReLiti</span></h3>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">Without <span className="text-accent font-bold ml-2">ReLiti</span></h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-muted">
                   <Image
                     src="/without-reliti.gif"
@@ -100,14 +100,14 @@ export default function ReLitiPage() {
               </div>
               
               {/* With ReLiti */}
-              <div className="overflow-hidden rounded-2xl border border-accent/30 bg-[#E1F5FF] dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-accent/15">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20 border border-accent">
+              <div className="overflow-hidden rounded-2xl border border-accent/30 bg-white dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-accent/15">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#00CCFF" opacity="0.2"/>
                     <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">With <span className="text-accent font-bold italic ml-2">ReLiti</span></h3>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">With <span className="text-accent font-bold ml-2">ReLiti</span></h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-muted">
                   <Image
                     src="/with-reliti.gif"
@@ -117,7 +117,7 @@ export default function ReLitiPage() {
                   />
                 </div>
                 <p className="text-muted-foreground">
-                  One click and <span className="text-accent font-bold italic mx-2">ReLiti</span> automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
+                  One click and <span className="text-accent font-bold mx-2">ReLiti</span> automatically handles all downloads for you. Spend your time on what matters most - legal analysis and case preparation.
                 </p>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function ReLitiPage() {
               Simple <span className="text-accent">Pricing.</span> Easy <span className="text-accent">Setup.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Getting started with <span className="text-accent font-semibold italic mx-2">ReLiti</span> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
+              Getting started with <span className="text-accent font-semibold mx-2">ReLiti</span> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
             </p>
             
             <div className="mt-14 grid gap-10 sm:grid-cols-3">
@@ -151,7 +151,7 @@ export default function ReLitiPage() {
                     </div>
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-foreground">Install</h3>
-                  <p className="text-muted-foreground">Download <span className="text-accent font-semibold italic mx-2">ReLiti</span> from the Chrome Web Store in seconds</p>
+                  <p className="text-muted-foreground">Download <span className="text-accent font-semibold mx-2">ReLiti</span> from the Chrome Web Store in seconds</p>
                 </div>
               </div>
               
@@ -222,8 +222,8 @@ export default function ReLitiPage() {
             </p>
             
             <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="group cursor-pointer overflow-hidden rounded-xl border-2 border-accent/30 bg-gradient-to-br from-[#E1F5FF] to-[#F0FAFF] dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 border border-accent">
+              <div className="group cursor-pointer overflow-hidden rounded-xl border border-accent/20 bg-white dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
                     <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -233,8 +233,8 @@ export default function ReLitiPage() {
                 <p className="text-muted-foreground">Save valuable time for meaningful legal work instead of mindless clicking</p>
               </div>
               
-              <div className="group cursor-pointer overflow-hidden rounded-xl border-2 border-accent/30 bg-gradient-to-br from-[#E1F5FF] to-[#F0FAFF] dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 border border-accent">
+              <div className="group cursor-pointer overflow-hidden rounded-xl border border-accent/20 bg-white dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -243,8 +243,8 @@ export default function ReLitiPage() {
                 <p className="text-muted-foreground">No more repetitive manual downloads that drain your energy and focus</p>
               </div>
               
-              <div className="group cursor-pointer overflow-hidden rounded-xl border-2 border-accent/30 bg-gradient-to-br from-[#E1F5FF] to-[#F0FAFF] dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 border border-accent">
+              <div className="group cursor-pointer overflow-hidden rounded-xl border border-accent/20 bg-white dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -270,7 +270,7 @@ export default function ReLitiPage() {
               Ready to Click Less?
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Join other legal professionals who've reclaimed hours of their workday with <span className="text-accent font-semibold italic mx-2">ReLiti</span>'s automation.
+              Join other legal professionals who've reclaimed hours of their workday with <span className="text-accent font-semibold mx-2">ReLiti</span>'s automation.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
@@ -279,7 +279,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <span className="text-button font-bold italic mx-2">ReLiti</span> Now
+                  Get <span className="text-button font-bold mx-2">ReLiti</span> Now
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -294,7 +294,7 @@ export default function ReLitiPage() {
         :root {
           --primary-bg: #FFFFFF;
           --accent: #038CF7;
-          --card-bg: #E1F5FF;
+          --card-bg: #FFFFFF;
           --button-color: #0469BA;
           --button-text: #FFFFFF;
         }
@@ -302,7 +302,7 @@ export default function ReLitiPage() {
         .dark {
           --primary-bg: #001A33;
           --accent: #038CF7;
-          --card-bg: #0A2A40;
+          --card-bg: #0A3050;
           --button-color: #05A3F7;
           --button-text: #001C36;
         }
