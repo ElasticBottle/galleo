@@ -120,7 +120,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get ReLiti & Reclaim Your Time
+                  Get the ReLiti Chrome Extension Today
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
@@ -130,6 +130,9 @@ export default function ReLitiPage() {
           </div>
         </div>
       </section>
+
+      {/* Spacer below hero */}
+      <div className="h-20 md:h-24"></div>
 
       {/* Problem Section (now new text) */}
       <section className="py-20">
@@ -201,12 +204,12 @@ export default function ReLitiPage() {
         </div>
       </section>
 
-      {/* Stop Clicking. Start Billing. ReLiti Handles the Rest. */}
+      {/* Stop Clicking. Start Billing. Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-8">
-              Stop <span className="text-accent">Clicking</span>. Start <span className="text-accent">Billing.</span> ReLiti Handles the Rest.
+              Stop <span className="text-accent">Clicking</span>. Start <span className="text-accent">Billing.</span>
             </h2>
             <div className="mx-auto max-w-xl rounded-2xl border border-sky-300 bg-white dark:bg-[#153048] p-8 text-left shadow-xl">
               <ul className="space-y-4 text-lg">
