@@ -60,7 +60,7 @@ export default function ReLitiPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.8,
-                  delay: 1,
+                  delay: 0.8,
                   ease,
                 }}
               >
@@ -72,8 +72,8 @@ export default function ReLitiPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 2,
-                duration: 0.8,
+                delay: 1.6,
+                duration: 0.3,
                 ease,
               }}
             >
@@ -84,7 +84,7 @@ export default function ReLitiPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 3,
+                delay: 1.6,
                 duration: 0.3,
                 ease,
               }}

@@ -20,7 +20,7 @@ export default function LandingPage() {
       <Section>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground mb-4">
-            Your Trademark Response Powerhouse, Built by IP Professionals
+            Your Trademark Response <span className="text-accent">Powerhouse</span>, Built by <span className="text-accent">IP Professionals</span>
           </h2>
           <div className="text-muted-foreground mb-8">
             <p>
