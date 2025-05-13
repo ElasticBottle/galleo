@@ -261,6 +261,38 @@ export default function LandingPage() {
 
       <Spacer className="h-20 md:h-24" />
 
+      <Section subtitle={<>Get Started in <span className="text-accent">3 Simple Steps</span></>}>
+        <div className="mx-auto max-w-4xl">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="flex flex-col items-center text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">
+                <span className="text-accent text-2xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Install on Outlook</h3>
+              <p className="text-muted-foreground">Add Galleo to your Microsoft Outlook with a simple installation process. No complex setup required.</p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">
+                <span className="text-accent text-2xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Login via Microsoft</h3>
+              <p className="text-muted-foreground">Securely authenticate with your existing Microsoft account. No new credentials to remember.</p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">
+                <span className="text-accent text-2xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Start Using</h3>
+              <p className="text-muted-foreground">Begin generating trademark responses instantly with a single click. Save hours on your very first day.</p>
+            </div>
+          </div>
+        </div>
+      </Section>
+      
+      <Spacer className="h-20 md:h-24" />
+
       <Cta />
       <Spacer className="h-20 md:h-24" />
     </div>

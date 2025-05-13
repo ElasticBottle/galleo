@@ -13,7 +13,7 @@ export function BrandButton({ className }: { className?: string }) {
       className={cn("flex items-center space-x-3", className)}
     >
       <Image
-        src="/galleo-ll-logo-light-mode.svg"
+        src="/galeo-ll-logo-light-mode.svg"
         alt={siteConfig.name}
         width={150}
         height={50}

@@ -1,7 +1,6 @@
 import { buttonVariants } from "@galleo/ui/components/base/button";
 import { cn } from "@galleo/ui/utils/cn";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "~/lib/site-config";
 import { ease } from "./constant";
@@ -19,17 +18,11 @@ export function HeroCTA() {
           href={siteConfig.hero.cta.href}
           className={cn(
             "dark:bg-accent dark:hover:bg-accent/90 dark:text-accent-foreground cta-button-light font-medium rounded-md px-5 py-2.5 shadow-sm",
-            "flex w-full items-center justify-center gap-2 sm:w-auto [&_svg]:size-3",
+            "flex w-full items-center justify-center sm:w-auto",
           )}
           data-attr={`hero-cta-${siteConfig.hero.cta.label}`}
           target={siteConfig.hero.cta.target}
         >
-          <Image 
-            src="/galleo-favicon.svg"
-            alt="Galleo"
-            width={16}
-            height={16}
-          />
           {siteConfig.hero.cta.label}
         </Link>
       </motion.div>

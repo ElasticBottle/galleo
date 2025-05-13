@@ -31,12 +31,17 @@ export default function Footer() {
           ))}
         </div>
         <div className="mx-auto grid size-full max-w-6xl grid-cols-1 justify-between gap-1 border-t py-2 md:grid-cols-2">
-          <span className="text-foreground text-sm tracking-tight">
-            Copyright © {new Date().getFullYear()}{" "}
-            <Link href="/" className="cursor-pointer">
-              {"Galleo AI Pte. Ltd."}
-            </Link>
-          </span>
+          <div className="flex flex-col">
+            <span className="text-foreground text-sm tracking-tight">
+              Copyright © {new Date().getFullYear()}{" "}
+              <Link href="/" className="cursor-pointer">
+                {"Galleo AI Pte. Ltd."}
+              </Link>
+            </span>
+            <span className="text-muted-foreground text-sm mt-1">
+              ✉️ <a href="mailto:contact@galleo.ai">contact@galleo.ai</a>
+            </span>
+          </div>
           <ul className="flex justify-start text-foreground text-sm tracking-tight md:justify-end">
             {siteConfig.footer.termsOfUseAndPrivacyPolicy && (
               <li className="mr-3 md:mx-4">
