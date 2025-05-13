@@ -100,11 +100,12 @@ export default function ReLitiPage() {
               </div>
               
               {/* With ReLiti */}
-              <div className="overflow-hidden rounded-2xl border border-accent/30 bg-white dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-accent/15">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
-                  <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#00CCFF" opacity="0.2"/>
-                    <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <div className="overflow-hidden rounded-2xl border border-sky-300 bg-white dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-accent/15">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/30">
+                  <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14" stroke="#38b6ff" strokeWidth="2.5" fill="#e0f2fe" />
+                    <circle cx="16" cy="16" r="9" stroke="#38b6ff" strokeWidth="2" fill="#fff" />
+                    <path d="M12.5 16.5L15.5 19.5L20 14" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <h3 className="mb-3 text-2xl font-bold text-foreground">With <span className="text-accent font-bold ml-2">ReLiti</span></h3>
@@ -222,7 +223,7 @@ export default function ReLitiPage() {
             </p>
             
             <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="group cursor-pointer overflow-hidden rounded-xl border border-accent/20 bg-white dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
+              <div className="group cursor-pointer overflow-hidden rounded-xl border border-sky-300 bg-white dark:bg-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
@@ -233,7 +234,7 @@ export default function ReLitiPage() {
                 <p className="text-muted-foreground">Save valuable time for meaningful legal work instead of mindless clicking</p>
               </div>
               
-              <div className="group cursor-pointer overflow-hidden rounded-xl border border-accent/20 bg-white dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
+              <div className="group cursor-pointer overflow-hidden rounded-xl border border-sky-300 bg-white dark:bg-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -243,7 +244,7 @@ export default function ReLitiPage() {
                 <p className="text-muted-foreground">No more repetitive manual downloads that drain your energy and focus</p>
               </div>
               
-              <div className="group cursor-pointer overflow-hidden rounded-xl border border-accent/20 bg-white dark:from-[#0A2A40] dark:to-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
+              <div className="group cursor-pointer overflow-hidden rounded-xl border border-sky-300 bg-white dark:bg-[#153048] p-6 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -261,7 +262,7 @@ export default function ReLitiPage() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl bg-gradient-to-br from-accent/20 to-transparent p-12 text-center">
+          <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl bg-gradient-to-br from-sky-100 via-white to-transparent dark:from-[#153048] dark:via-[#0A2A40] dark:to-transparent p-12 text-center">
             <div className="absolute top-0 left-0 -z-10 h-full w-full opacity-10">
               <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-accent blur-3xl"></div>
               <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-accent blur-3xl"></div>
@@ -272,20 +273,18 @@ export default function ReLitiPage() {
             <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Join other legal professionals who've reclaimed hours of their workday with <span className="text-accent font-semibold mx-2">ReLiti</span>'s automation.
             </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
-                target="_blank"
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
-              >
-                <span className="relative z-10 flex items-center">
-                  Get <span className="text-button font-bold mx-2">ReLiti</span> Now
-                  <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </Link>
-            </div>
+            <Link
+              href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+              target="_blank"
+              className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
+            >
+              <span className="relative z-10 flex items-center">
+                Get <span className="text-button font-bold mx-2">ReLiti</span> Now
+                <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
