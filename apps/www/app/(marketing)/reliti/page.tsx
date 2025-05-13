@@ -9,7 +9,7 @@ import Link from "next/link";
 const HeroLogo = ({ className = "" }: { className?: string }) => (
   <span className={cn("inline-block relative", className)}>
     <Image 
-      src="/ReLiti.png" 
+      src="/ReLiti.svg" 
       alt="ReLiti Logo" 
       width={140}
       height={52}
@@ -21,7 +21,7 @@ const HeroLogo = ({ className = "" }: { className?: string }) => (
 const HeadingLogo = ({ className = "" }: { className?: string }) => (
   <span className={cn("inline-block text-[#00CCFF]", className)}>
     <Image 
-      src="/ReLiti.png" 
+      src="/ReLiti.svg" 
       alt="ReLiti Logo" 
       width={80}
       height={30}
@@ -45,7 +45,7 @@ const BodyLogo = ({ className = "", large = false }: { className?: string; large
 const ButtonLogo = ({ className = "", dark = false }: { className?: string; dark?: boolean }) => (
   <span className={cn("inline-block", dark ? "text-[#0A1929]" : "text-[#00CCFF]", className)}>
     <Image 
-      src="/ReLiti.png" 
+      src="/ReLiti.svg" 
       alt="ReLiti Logo" 
       width={70}
       height={26}
