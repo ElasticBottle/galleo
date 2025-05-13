@@ -53,9 +53,9 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
     <section className="py-16">
       <div className="container mx-auto max-w-5xl px-4">
         {/* Insights H1 */}
-        <h1 className="text-4xl font-bold mb-8 text-center" style={{ color: 'hsl(var(--primary))' }}>Insights</h1>
+        <h1 className="text-5xl font-bold mb-8 text-center text-foreground">Insights</h1>
         {/* Most Recent Article */}
-        <h2 className="text-2xl font-semibold mb-4 text-center">Most Recent Article</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-center text-foreground">Most Recent Article</h2>
         {hero && (
           <section className="mb-12 w-full">
             <Link href={`/insights/${hero.slug}`}>
@@ -94,7 +94,7 @@ export default function ClientBlogGrid({ articles }: { articles: Content[] }) {
         )}
 
         {/* Categories Signpost */}
-        <h2 className="text-xl font-semibold mb-2 text-center py-4">Article Categories</h2>
+        <h2 className="text-3xl font-semibold mb-2 text-center py-4 text-foreground">Article Categories</h2>
         <nav className="mb-4 flex flex-wrap justify-center gap-2">
           <button
             type="button"

@@ -42,8 +42,7 @@ export default function ReLitiPage() {
                 ease,
                 staggerChildren: 0.2,
               }}
-            >
-              <motion.div
+            >              <motion.div
                 className="block text-balance leading-[1.15] tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -61,7 +60,7 @@ export default function ReLitiPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.8,
-                  delay: 0.2,
+                  delay: 1,
                   ease,
                 }}
               >
@@ -73,7 +72,7 @@ export default function ReLitiPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.4,
+                delay: 2,
                 duration: 0.8,
                 ease,
               }}
@@ -85,7 +84,7 @@ export default function ReLitiPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.6,
+                delay: 3,
                 duration: 0.8,
                 ease,
               }}
