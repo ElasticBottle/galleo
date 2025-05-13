@@ -14,22 +14,15 @@ import { Section } from "./_components/section";
 export default function LandingPage() {
   return (
     <div>
-      <Spacer className="h-20 md:h-24" />
       <Hero />
       <Spacer className="h-20 md:h-24" />
       
       <Section>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground mb-4">Your Trademark Response <span className="text-accent">Powerhouse</span></h2>
-          <div className="text-muted-foreground">
-            <p>
-              Galleo seamlessly integrates into your workflow, transforming client trademark inquiries into revenue opportunities with one-click processing. Our AI analyzes complex trademark scenarios, navigates international regulations, and produces client-ready responses that maintain your firm's voice and expertise.
-            </p>
-          </div>
         </div>
       </Section>
       
-      <Spacer className="h-20 md:h-24" />
       <FeatureSection
         label=""
         title={<><span className="text-accent"> 5 Hours</span> of Drafting → <span className="text-accent">5 Seconds</span> with Galleo</>}
@@ -261,7 +254,7 @@ export default function LandingPage() {
         <Spacer className="h-8 md:h-10" />
         <Logos />
       </Section>
-
+      
       <Spacer className="h-20 md:h-24" />
       
       <Section>
