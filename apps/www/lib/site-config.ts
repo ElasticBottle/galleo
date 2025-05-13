@@ -4,6 +4,7 @@ import { ROUTE_CONTACT_US } from "./routes";
 
 const COMPANY_NAME = "Galleo";
 const SUPPORT_EMAIL = "support@galleo.ai";
+const TRADEMARK_ASSISTANT_URL = "https://dev.galleoai.com/dashboard/2/trademark-assistant";
 
 export const siteConfig: SiteConfig = {
   name: COMPANY_NAME,
@@ -14,7 +15,7 @@ export const siteConfig: SiteConfig = {
   keywords: ["Trademark", "Branding", "Patent", "IP"],
   links: {
     email: SUPPORT_EMAIL,
-    talkToUs: ROUTE_CONTACT_US,
+    talkToUs: TRADEMARK_ASSISTANT_URL,
     twitter: "https://twitter.com/galleo_ai",
   },
   header: [
@@ -22,7 +23,7 @@ export const siteConfig: SiteConfig = {
       variant: "button",
       buttonVariant: "navigation",
       href: "/",
-      label: "Home",
+      label: "Galleo",
     },
     {
       variant: "button",
@@ -40,8 +41,8 @@ export const siteConfig: SiteConfig = {
       variant: "button",
       buttonVariant: "default",
       target: "_blank",
-      href: ROUTE_CONTACT_US,
-      label: "Book a demo today",
+      href: TRADEMARK_ASSISTANT_URL,
+      label: "Try It Today",
     },
   ],
   hero: {
@@ -54,8 +55,8 @@ export const siteConfig: SiteConfig = {
     description:
       "Galleo instantly generates complete trademark enquiry assessments, precise fee quotes, and accurate NICE classifications—freeing your talent for billable work.",
     cta: {
-      href: ROUTE_CONTACT_US,
-      label: "Book a demo today",
+      href: TRADEMARK_ASSISTANT_URL,
+      label: "Try It Today",
       target: "_blank",
       buttonVariant: "default",
     },
@@ -90,8 +91,8 @@ export const siteConfig: SiteConfig = {
   },
   cta: {
     subtitle: "Ready to Stop Drafting and Start Billing?",
-    buttonText: "Book a demo today",
-    href: ROUTE_CONTACT_US,
+    buttonText: "Try It Today",
+    href: TRADEMARK_ASSISTANT_URL,
   },
   footer: {
     items: [],

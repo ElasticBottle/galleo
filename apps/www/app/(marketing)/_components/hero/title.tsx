@@ -36,12 +36,12 @@ export function HeroTitle() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.6,
+          delay: 1.0,
           duration: 0.8,
           ease,
         }}
       >
-        Galleo instantly generates complete <span className="text-accent font-semibold">trademark enquiry assessments</span>, precise <span className="text-accent font-semibold">fee quotes</span>, and accurate <span className="text-accent font-semibold">NICE classifications</span>—freeing your talent for billable work.
+        Galleo instantly generates complete trademark enquiry assessments, precise fee quotes, and accurate NICE classifications—freeing your talent for billable work.
       </motion.p>
     </div>
   );

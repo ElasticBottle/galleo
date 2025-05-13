@@ -21,7 +21,7 @@ export function FeatureSection({
   position = "right",
 }: FeatureSectionProps) {
   const ContentSection = (
-    <div className="flex h-full items-center bg-slate-100 dark:bg-slate-800 px-4 py-10 md:px-12 md:py-24 lg:px-24">
+    <div className="flex h-full items-center bg-slate-200 dark:bg-slate-800 px-4 py-10 md:px-12 md:py-24 lg:px-24">
       <div className="max-w-xl">
         <span className="font-medium text-muted-foreground text-sm">
           {label}
@@ -46,7 +46,7 @@ export function FeatureSection({
   );
 
   const ShowcaseSection = (
-    <div className="flex h-full items-center bg-slate-800 dark:bg-foreground px-4 py-24 md:px-12 lg:px-24">
+    <div className="flex h-full items-center bg-slate-700 dark:bg-foreground px-4 py-24 md:px-12 lg:px-24">
       {showcaseContent}
     </div>
   );
