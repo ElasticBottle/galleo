@@ -88,6 +88,8 @@ export default function ReLitiPage() {
                     src="/without-reliti.gif"
                     alt="Manual clicking process without ReLiti"
                     fill
+                    priority
+                    unoptimized
                     className="object-cover"
                   />
                 </div>
@@ -109,6 +111,8 @@ export default function ReLitiPage() {
                     src="/with-reliti.gif"
                     alt="Automated downloading with ReLiti"
                     fill
+                    priority
+                    unoptimized
                     className="object-cover"
                   />
                 </div>
