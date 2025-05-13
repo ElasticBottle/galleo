@@ -52,7 +52,7 @@ export default function ReLitiPage() {
                   ease,
                 }}
               >
-                Click Once.
+                Click <span className="text-accent font-bold">Once</span>.
               </motion.div>
               <motion.div
                 className="mt-2 block text-balance leading-[1.15] tracking-tight"
