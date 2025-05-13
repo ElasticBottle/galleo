@@ -16,6 +16,27 @@ export default function LandingPage() {
       <Spacer className="h-20 md:h-24" />
       <Hero />
       <Spacer className="h-20 md:h-24" />
+      
+      <Section subtitle={<>What is <span className="text-accent">Galleo</span>?</>}>
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">The AI Trademark Assistant for Law Firms</h2>
+          <div className="text-muted-foreground space-y-4">
+            <p>
+              Galleo is an AI-powered trademark automation tool that instantly generates complete 
+              trademark enquiry assessments, precise fee quotes, and accurate NICE classifications—saving 
+              your firm hours of non-billable work.
+            </p>
+            <p>
+              Our solution integrates directly with your workflow through Microsoft Outlook, 
+              requiring no additional software installations or complex setup. With just one click, 
+              Galleo analyzes client inquiries and produces comprehensive, professionally formatted 
+              responses tailored to your firm's style and standards.
+            </p>
+          </div>
+        </div>
+      </Section>
+      
+      <Spacer className="h-20 md:h-24" />
       <Section subtitle={<>Built by <span className="text-accent">IP professionals</span>, powered by <span className="text-accent">AI</span></>}>
         <div className="mx-auto max-w-md text-center text-muted-foreground">
           <p>
@@ -29,17 +50,17 @@ export default function LandingPage() {
       <Spacer className="h-20 md:h-24" />
       <FeatureSection
         label=""
-        title={<>5 <span className="text-accent">Hours</span> of Drafting → 5 <span className="text-accent">Seconds</span> with Galleo</>}
+        title={<><span className="text-accent"> 5 Hours</span> of Drafting → <span className="text-accent">5 Seconds</span> with Galleo</>}
         description={
           <div className="space-y-4">
-            <p className="font-semibold text-lg">
+            <p className="font-bold text-lg">
               Trademark Enquiries? Done.
             </p>
             <p>
               Eliminate manual response drafting completely. Galleo analyzes client trademark inquiries and generates professional, complete responses instantly. Simply review and send.
             </p>
             <div className="space-y-2">
-              <p className="font-medium">Every Automated Response Includes:</p>
+              <p className="font-bold">Every Automated Response Includes:</p>
               <ul className="ml-0 space-y-3 text-muted-foreground/80">
                 <li className="flex items-start gap-3">
                   <span className="mt-1">
@@ -85,17 +106,17 @@ export default function LandingPage() {
 
       <FeatureSection
         label=""
-        title={<><span className="text-accent">Effortless</span> drafting, always in your <span className="text-accent">control</span></>}
+        title={<><span className="text-accent">Effortless</span> Drafting, Always in <span className="text-accent">Your Control</span></>}
         description={
           <div className="space-y-4">
-            <p className="font-semibold text-lg">
+            <p className="font-bold text-lg">
               Your AI Trademark Associate
             </p>
             <p>
               Maintain your quality standards while cutting hours from your workday. Galleo drafts trademark enquiry responses in your firm's style and voice, ensuring consistent client communications. Need adjustments? Simply prompt Galleo to refine any aspect instantly.
             </p>
             <div className="space-y-2">
-              <p className="font-medium">Smart Drafting Features:</p>
+              <p className="font-bold">Smart Drafting Features:</p>
               <ul className="ml-0 space-y-3 text-muted-foreground/80">
                 <li className="flex items-start gap-3">
                   <span className="mt-1">
@@ -142,10 +163,10 @@ export default function LandingPage() {
 
       <FeatureSection
         label=""
-        title={<><span className="text-accent">One Click</span> in Outlook. <span className="text-accent">Full</span> Trademark Response.</>}
+        title={<><span className="text-accent">One Click in Outlook</span>. Full Enquiry Response.</>}
         description={
           <div className="space-y-4">
-            <p className="font-semibold text-lg">
+            <p className="font-bold text-lg">
               No New Tools. No Learning Curve.
             </p>
             <p>
@@ -194,8 +215,8 @@ export default function LandingPage() {
       <Spacer className="h-20 md:h-24" />
 
       <FeatureSection
-        label="Features"
-        title={<>Your data, <span className="text-accent">fully protected</span></>}
+        label=""
+        title={<>Your Data, <span className="text-accent">Fully Protected</span></>}
         description={
           <div className="space-y-4">
             <p>

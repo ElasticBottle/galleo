@@ -17,7 +17,7 @@ export function HeroCTA() {
         <Link
           href={siteConfig.hero.cta.href}
           className={cn(
-            "bg-accent hover:bg-accent/90 text-white font-medium rounded-md px-5 py-2.5 shadow-sm",
+            "bg-accent hover:bg-accent/90 text-accent-foreground font-medium rounded-md px-5 py-2.5 shadow-sm",
             "flex w-full items-center justify-center gap-2 sm:w-auto [&_svg]:size-3",
           )}
           data-attr={`hero-cta-${siteConfig.hero.cta.label}`}
