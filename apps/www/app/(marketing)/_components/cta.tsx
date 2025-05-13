@@ -19,8 +19,8 @@ export function Cta() {
           href={siteConfig.cta.href}
           target="_blank"
           className={cn(
-            buttonVariants({ variant: "default" }),
-            "flex w-full gap-2 sm:w-auto",
+            "bg-accent hover:bg-accent/90 text-white font-medium rounded-md px-5 py-3 shadow-sm",
+            "flex w-full items-center justify-center gap-2 sm:w-auto",
           )}
         >
           {siteConfig.cta.buttonText}

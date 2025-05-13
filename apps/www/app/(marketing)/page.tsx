@@ -13,9 +13,9 @@ import { Section } from "./_components/section";
 export default function LandingPage() {
   return (
     <div>
-      <Spacer className="h-100- md:h-60" />
+      <Spacer className="h-20 md:h-24" />
       <Hero />
-      <Spacer className="h-100 md:h-60" />
+      <Spacer className="h-20 md:h-24" />
       <Section subtitle={<>Built by <span className="text-accent">IP professionals</span>, powered by <span className="text-accent">AI</span></>}>
         <div className="mx-auto max-w-md text-center text-muted-foreground">
           <p>

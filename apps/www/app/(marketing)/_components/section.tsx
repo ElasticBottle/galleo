@@ -33,7 +33,7 @@ export function Section({
           ) : null}
 
           {subtitle ? (
-            <h3 className="text-2xl font-medium tracking-tight text-foreground sm:text-3xl leading-relaxed">
+            <h3 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl leading-relaxed">
               {subtitle}
             </h3>
           ) : null}
