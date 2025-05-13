@@ -244,21 +244,6 @@ export default function LandingPage() {
 
       <Section>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Built by <span className="text-accent">IP professionals</span>, powered by <span className="text-accent">AI</span></h2>
-          <div className="text-muted-foreground">
-            <p>
-              Developed by a specialized team of Silicon Valley AI engineers and experienced IP lawyers who understand exactly how trademark enquiry drafting drains your firm's resources. Galleo transforms how modern IP practices handle their daily trademark workload.
-            </p>
-          </div>
-        </div>
-        <Spacer className="h-8 md:h-10" />
-        <Logos />
-      </Section>
-      
-      <Spacer className="h-20 md:h-24" />
-      
-      <Section>
-        <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-4">Get Started in <span className="text-accent">3 Simple Steps</span></h2>
           <div className="text-muted-foreground">
             <p>
@@ -268,6 +253,21 @@ export default function LandingPage() {
         </div>
         <Spacer className="h-8 md:h-10" />
         <IntegrationSteps />
+      </Section>
+      
+      <Spacer className="h-20 md:h-24" />
+      
+      <Section>
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">Built by <span className="text-accent">IP professionals</span>, powered by <span className="text-accent">AI</span></h2>
+          <div className="text-muted-foreground">
+            <p>
+              Developed by a specialized team of Silicon Valley AI engineers and experienced IP lawyers who understand exactly how trademark enquiry drafting drains your firm's resources. Galleo transforms how modern IP practices handle their daily trademark workload.
+            </p>
+          </div>
+        </div>
+        <Spacer className="h-8 md:h-10" />
+        <Logos />
       </Section>
 
       <Spacer className="h-20 md:h-24" />
