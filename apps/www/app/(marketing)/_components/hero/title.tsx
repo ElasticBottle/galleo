@@ -4,9 +4,9 @@ import { ease } from "./constant";
 
 export function HeroTitle() {
   return (
-    <div className="flex w-full max-w-2xl flex-col items-center space-y-4 overflow-hidden">
+    <div className="flex w-full max-w-2xl flex-col items-center space-y-6 overflow-hidden">
       <motion.h1
-        className="text-center font-medium text-4xl text-foreground sm:text-5xl md:text-6xl"
+        className="text-center font-sans font-bold text-5xl text-foreground sm:text-6xl md:text-7xl tracking-tight"
         initial={{ filter: "blur(10px)", opacity: 0, y: 50 }}
         animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
         transition={{
@@ -18,7 +18,7 @@ export function HeroTitle() {
         {siteConfig.hero.title.map((text, index) => (
           <motion.span
             key={text}
-            className="inline-block text-balance px-1 font-semibold leading-[1.1] tracking-wide md:px-2"
+            className="inline-block text-balance px-1 leading-[1.15] tracking-tight md:px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
@@ -32,7 +32,7 @@ export function HeroTitle() {
         ))}
       </motion.h1>
       <motion.p
-        className="mx-auto max-w-xl text-balance text-center text-lg text-muted-foreground leading-7 sm:text-xl sm:leading-snug"
+        className="mx-auto max-w-xl text-balance text-center text-xl text-muted-foreground leading-relaxed"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -41,7 +41,7 @@ export function HeroTitle() {
           ease,
         }}
       >
-        {siteConfig.hero.description}
+        Galleo instantly generates complete <span className="text-accent font-semibold">trademark enquiry assessments</span>, precise <span className="text-accent font-semibold">fee quotes</span>, and accurate <span className="text-accent font-semibold">NICE classifications</span>—freeing your talent for billable work.
       </motion.p>
     </div>
   );

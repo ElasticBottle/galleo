@@ -26,19 +26,21 @@ export function FeatureSection({
         <span className="font-medium text-muted-foreground text-sm">
           {label}
         </span>
-        <h2 className="mt-6 font-medium text-5xl text-foreground leading-tight">
+        <h2 className="mt-6 font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl leading-tight">
           {title}
         </h2>
-        <div className="mt-6 text-lg text-muted-foreground">{description}</div>
-        <a
-          href={siteConfig.links.talkToUs}
-          data-attr={ctaText}
-          target="_blank"
-          className="mt-8 flex items-center font-medium text-muted-foreground text-sm hover:text-foreground"
-          rel="noreferrer"
-        >
-          {ctaText} &rarr;
-        </a>
+        <div className="mt-6 text-lg text-muted-foreground leading-relaxed">{description}</div>
+        {ctaText && (
+          <a
+            href={siteConfig.links.talkToUs}
+            data-attr={ctaText}
+            target="_blank"
+            className="mt-8 flex items-center font-medium text-muted-foreground text-sm hover:text-foreground"
+            rel="noreferrer"
+          >
+            {ctaText} &rarr;
+          </a>
+        )}
       </div>
     </div>
   );

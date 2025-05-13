@@ -1,48 +1,46 @@
+import type { ReactNode } from "react";
 import { cn } from "@galleo/ui/utils/cn";
 
 interface SectionProps {
   id?: string;
-  title?: string | undefined;
-  subtitle?: string | undefined;
-  description?: string | undefined;
-  children?: React.ReactNode;
+  children: ReactNode;
+  title?: ReactNode;
+  subtitle?: ReactNode;
   className?: string;
 }
 
 export function Section({
-  id,
+  children,
   title,
   subtitle,
-  description,
-  children,
   className,
+  ...props
 }: SectionProps) {
-  const sectionId = title ? title.toLowerCase().replace(/\s+/g, "-") : id;
   return (
     <section
-      id={id || sectionId}
-      className={cn("container relative max-w-7xl px-4", className)}
+      className={cn(
+        "flex flex-col justify-center py-12 md:py-14",
+        className,
+      )}
+      {...props}
     >
-      {(title || subtitle || description) && (
-        <div className="flex w-full flex-col items-center space-y-4 pb-6 ">
-          {title && (
-            <h2 className="text-center font-medium font-mono text-primary text-sm uppercase tracking-wider">
+      <div className="container">
+        <div className="space-y-4 text-center">
+          {title ? (
+            <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               {title}
             </h2>
-          )}
-          {subtitle && (
-            <h3 className="max-w-xs text-center font-semibold text-3xl sm:max-w-none sm:text-4xl md:text-5xl">
+          ) : null}
+
+          {subtitle ? (
+            <h3 className="text-2xl font-medium tracking-tight text-foreground sm:text-3xl leading-relaxed">
               {subtitle}
             </h3>
-          )}
-          {description && (
-            <p className="max-w-2xl text-center text-lg text-muted-foreground leading-8">
-              {description}
-            </p>
-          )}
+          ) : null}
         </div>
-      )}
-      {children}
+
+        <div className="mt-8 md:mt-10">{children}</div>
+      </div>
     </section>
   );
 }

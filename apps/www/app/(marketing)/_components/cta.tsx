@@ -11,7 +11,7 @@ export function Cta() {
     <Section
       id="cta"
       title={siteConfig.cta.title}
-      subtitle={siteConfig.cta.subtitle}
+      subtitle={<>Ready to <span className="text-accent">Stop Drafting</span> and <span className="text-accent">Start Billing</span>?</>}
       className="bg-primary/10 py-16 xl:rounded-lg"
     >
       <div className="flex w-full items-center justify-center pt-4">

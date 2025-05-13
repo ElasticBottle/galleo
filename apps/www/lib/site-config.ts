@@ -46,10 +46,13 @@ export const siteConfig: SiteConfig = {
   ],
   hero: {
     title: [
-      "Reduce hours of drafting initial trademark assessments into seconds",
+      "Draft.",
+      "Send.",
+      "Bill.",
+      "Repeat."
     ],
     description:
-      "Galleo instantly drafts preliminary trademark assessments, fee quotes, and recommends NICE classifications, saving IP professionals up to 5 hours a day.",
+      "Galleo instantly generates complete trademark enquiry assessments, precise fee quotes, and accurate NICE classifications—freeing your talent for billable work.",
     cta: {
       href: ROUTE_CONTACT_US,
       label: "Book a demo today",
@@ -86,7 +89,7 @@ export const siteConfig: SiteConfig = {
     ],
   },
   cta: {
-    subtitle: "Reclaim your time and elevate your practice today",
+    subtitle: "Ready to Stop Drafting and Start Billing?",
     buttonText: "Book a demo today",
     href: ROUTE_CONTACT_US,
   },
