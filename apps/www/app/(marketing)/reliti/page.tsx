@@ -72,6 +72,14 @@ export default function ReLitiPage() {
       {/* Side-by-Side Comparison Section (updated text and icons) */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                Turn <span className="text-accent">130+ Clicks</span> Into Just <span className="text-accent">One</span>
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                Your billable hours are too valuable for repetitive downloads. <span className="text-accent font-semibold">ReLiti</span> automates court searches so you can focus on high-value legal work instead of mindless clicking. Used by legal professionals to save 40+mins per search and eliminate human error.
+              </p>
+            </div>
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Without ReLiti */}
@@ -79,7 +87,6 @@ export default function ReLitiPage() {
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
                   <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16" cy="16" r="14" stroke="#ef4444" strokeWidth="2.5" fill="#fee2e2" />
-                    <circle cx="16" cy="16" r="9" stroke="#ef4444" strokeWidth="2" fill="#fff" />
                     <text x="16" y="21" textAnchor="middle" fontSize="18" fill="#ef4444" fontWeight="bold">?</text>
                   </svg>
                 </div>
@@ -101,7 +108,6 @@ export default function ReLitiPage() {
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900/30">
                   <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16" cy="16" r="14" stroke="#38b6ff" strokeWidth="2.5" fill="#e0f2fe" />
-                    <circle cx="16" cy="16" r="9" stroke="#38b6ff" strokeWidth="2" fill="#fff" />
                     <path d="M12.5 16.5L15.5 19.5L20 14" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
@@ -123,12 +129,12 @@ export default function ReLitiPage() {
         </div>
       </section>
 
-      {/* One Click to Automation Section (moved up, single card) */}
+      {/* Stop Clicking. Start Billing. ReLiti Handles the Rest. */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-8">
-              Stop <span className="text-accent">Clicking</span>. Start <span className="text-accent">Billing.</span> <span className="text-accent font-bold">ReLiti</span> Handles the Rest.
+              Stop <span className="text-accent">Clicking</span>. Start <span className="text-accent">Billing.</span> ReLiti Handles the Rest.
             </h2>
             <div className="mx-auto max-w-xl rounded-2xl border border-sky-300 bg-white dark:bg-[#153048] p-8 text-left shadow-xl">
               <ul className="space-y-4 text-lg">
@@ -142,27 +148,12 @@ export default function ReLitiPage() {
         </div>
       </section>
 
-      {/* Quote Section (prominent) */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-2xl">
-            <div className="relative rounded-2xl border border-sky-200 bg-white dark:bg-[#153048] shadow-xl px-8 py-12 flex flex-col items-center text-center">
-              <svg className="mb-6 h-12 w-12 text-sky-400" fill="none" viewBox="0 0 48 48" stroke="currentColor" strokeWidth="2">
-                <path d="M16 20c0-6 4-10 10-10s10 4 10 10c0 4-2 7-6 9l-2 1v2a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2l-2-1c-4-2-6-5-6-9z" fill="#e0f2fe" stroke="#38b6ff" strokeWidth="2.5"/>
-              </svg>
-              <blockquote className="italic text-2xl font-semibold text-foreground mb-4">“As an associate handling multiple transactions daily, ReLiti has been a game-changer for my productivity and accuracy.”</blockquote>
-              <div className="text-muted-foreground text-lg font-medium">— Associate Lawyer, ReLiti User</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing and How to Use Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Simple <span className="text-accent">Pricing.</span> Easy <span className="text-accent">Setup.</span>
+              Easy <span className="text-accent">Setup.</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Getting started with <span className="text-accent font-semibold mx-2">ReLiti</span> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
@@ -186,7 +177,7 @@ export default function ReLitiPage() {
                   <p className="text-muted-foreground">Download <span className="text-accent font-semibold mx-2">ReLiti</span> from the Chrome Web Store in seconds</p>
                 </div>
               </div>
-              
+              {/*
               <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
@@ -203,7 +194,7 @@ export default function ReLitiPage() {
                   <p className="text-muted-foreground">Connect with your Microsoft account</p>
                 </div>
               </div>
-              
+              */}
               <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
@@ -213,7 +204,7 @@ export default function ReLitiPage() {
                         <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                      <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">3</div>
+                      <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">2</div>
                     </div>
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-foreground">Start Using</h3>
@@ -221,7 +212,7 @@ export default function ReLitiPage() {
                 </div>
               </div>
             </div>
-            
+            {/*
             <div className="relative mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl border border-border bg-card-custom p-8 shadow-xl">
               <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
               <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
@@ -238,6 +229,7 @@ export default function ReLitiPage() {
                 </div>
               </div>
             </div>
+            */}
           </div>
         </div>
       </section>
