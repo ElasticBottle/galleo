@@ -62,31 +62,33 @@ export const siteConfig: SiteConfig = {
     },
   },
   socialProof: {
+    title: "Built by IP Professionals",
     icons: [
       {
-        href: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOj-PJ7_F-RpOkFwiIxrvgue_UDHs_lJbyQ&s",
+        href: "/oxford.png",
         name: "Oxford",
       },
       {
-        href: "https://media.licdn.com/dms/image/v2/C560BAQG-6MUyGaEjKg/company-logo_100_100/company-logo_100_100/0/1662956008666/drew__napier_llc_logo?e=1745452800&v=beta&t=S1UKpdga7cH3Ssna0frfIyVtc5SzObME9ZZb5MqJAjg",
+        href: "/drew.jpeg",
         name: "Drew and Napier",
       },
       {
-        href: "https://i0.wp.com/thecustodian.ca/wp-content/uploads/2022/02/waterloo.png?fit=600%2C600&ssl=1",
-        name: "Waterloo",
-      },
-      {
-        href: "https://media.licdn.com/dms/image/v2/C4E0BAQFDslWTgw1Q4g/company-logo_100_100/company-logo_100_100/0/1631325721627?e=1745452800&v=beta&t=1gTqTZW0OJYP-LeGxoBxPL3mhZOYw6MCfRrkmYb_I80",
+        href: "/baker.png",
         name: "Baker",
       },
       {
-        href: "https://upload.wikimedia.org/wikipedia/en/b/b9/NUS_coat_of_arms.svg",
+        href: "/pwc.png",
+        name: "PWC",
+      },
+      {
+        href: "/nus.png",
         name: "NUS",
       },
       {
-        href: "https://media.licdn.com/dms/image/v2/D4E0BAQGnGELqq6HXHw/company-logo_100_100/company-logo_100_100/0/1720517867022/pwc_logo?e=1745452800&v=beta&t=Zbrob75hisyL8NOgTetZresqF-wCwsdlo410J2iWRXQ",
-        name: "PWC",
+        href: "/waterloo.png",
+        name: "Waterloo",
       },
+
     ],
   },
   cta: {

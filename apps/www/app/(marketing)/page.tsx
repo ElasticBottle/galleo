@@ -7,6 +7,7 @@ import { Email } from "./_components/feature/email";
 import { Integrated } from "./_components/feature/integrated";
 import { Security } from "./_components/feature/security";
 import { Hero } from "./_components/hero";
+import { IntegrationSteps } from "./_components/integration-steps";
 import { Logos } from "./_components/logos";
 import { Section } from "./_components/section";
 
@@ -259,6 +260,21 @@ export default function LandingPage() {
         </div>
         <Spacer className="h-8 md:h-10" />
         <Logos />
+      </Section>
+
+      <Spacer className="h-20 md:h-24" />
+      
+      <Section>
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">Get Started in <span className="text-accent">3 Simple Steps</span></h2>
+          <div className="text-muted-foreground">
+            <p>
+              Starting with Galleo is quick and easy. Our streamlined onboarding process gets you up and running in minutes.
+            </p>
+          </div>
+        </div>
+        <Spacer className="h-8 md:h-10" />
+        <IntegrationSteps />
       </Section>
 
       <Spacer className="h-20 md:h-24" />
