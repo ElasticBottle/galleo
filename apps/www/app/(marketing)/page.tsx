@@ -20,7 +20,7 @@ export default function LandingPage() {
       <Section>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground mb-4">
-            Your Trademark Response <span className="text-accent">Powerhouse</span>, Built by <span className="text-accent">IP Professionals</span>
+            Your <span className="text-accent">Trademark Response Powerhouse</span>, Built by <span className="text-accent">IP Professionals</span>
           </h2>
           <div className="text-muted-foreground mb-8">
             <p>
@@ -33,7 +33,7 @@ export default function LandingPage() {
       
       <FeatureSection
         label=""
-        title={<><span className="text-accent"> 5 Hours</span> of Drafting → <span className="text-accent">5 Seconds</span> with Galleo</>}
+        title={<><span className="text-accent"> 2 Hours</span> of Drafting → <span className="text-accent">30 Seconds</span> with Galleo</>}
         description={
           <div className="space-y-4">
             <p className="font-bold text-lg">
@@ -89,7 +89,7 @@ export default function LandingPage() {
 
       <FeatureSection
         label=""
-        title={<><span className="text-accent">Effortless</span> Drafting, Always in <span className="text-accent">Your Control</span></>}
+        title={<><span className="text-accent">Effortless Drafting</span>, Always in <span className="text-accent">Your Control</span></>}
         description={
           <div className="space-y-4">
             <p className="font-bold text-lg">
