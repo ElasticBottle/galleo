@@ -19,18 +19,12 @@ export default function LandingPage() {
       
       <Section subtitle={<>What is <span className="text-accent">Galleo</span>?</>}>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">The AI Trademark Assistant for Law Firms</h2>
-          <div className="text-muted-foreground space-y-4">
+          <h2 className="text-3xl font-bold tracking-tight mb-4">AI-Powered Trademark Response Generator</h2>
+          <div className="text-muted-foreground">
             <p>
-              Galleo is an AI-powered trademark automation tool that instantly generates complete 
-              trademark enquiry assessments, precise fee quotes, and accurate NICE classifications—saving 
-              your firm hours of non-billable work.
-            </p>
-            <p>
-              Our solution integrates directly with your workflow through Microsoft Outlook, 
-              requiring no additional software installations or complex setup. With just one click, 
-              Galleo analyzes client inquiries and produces comprehensive, professionally formatted 
-              responses tailored to your firm's style and standards.
+              Galleo turns hours of trademark inquiry drafting into seconds, 
+              instantly generating complete assessments, fee quotes, and NICE classifications. 
+              Free your talented staff from repetitive tasks and increase your firm's profitability.
             </p>
           </div>
         </div>

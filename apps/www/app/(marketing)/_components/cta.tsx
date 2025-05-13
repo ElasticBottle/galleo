@@ -19,7 +19,7 @@ export function Cta() {
           href={siteConfig.cta.href}
           target="_blank"
           className={cn(
-            "bg-accent hover:bg-accent/90 text-accent-foreground font-medium rounded-md px-5 py-3 shadow-sm",
+            "dark:bg-accent dark:hover:bg-accent/90 dark:text-accent-foreground cta-button-light font-medium rounded-md px-5 py-3 shadow-sm",
             "flex w-full items-center justify-center gap-2 sm:w-auto",
           )}
         >
