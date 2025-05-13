@@ -46,7 +46,7 @@ const BodyLogo = ({ className = "", large = false }: { className?: string; large
 );
 
 const ButtonLogo = ({ className = "", dark = false }: { className?: string; dark?: boolean }) => (
-  <span className={cn("inline-block", dark ? "text-primary-bg" : "text-accent", className)}>
+  <span className={cn("inline-block", dark ? "text-button" : "text-accent", className)}>
     <Image 
       src="/ReLiti 160x160.svg" 
       alt="ReLiti Logo" 
@@ -96,7 +96,7 @@ export default function ReLitiPage() {
               <Link
                 href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
                 target="_blank"
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-accent px-8 py-3 text-lg font-medium text-primary-bg transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
                   Get <ButtonLogo dark className="mx-2 inline-block" /> & Reclaim Your Time
@@ -132,7 +132,7 @@ export default function ReLitiPage() {
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Without ReLiti */}
-              <div className="overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-lg">
+              <div className="overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:shadow-lg">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-900/20 dark:bg-red-900/30">
                   <svg className="h-8 w-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -155,7 +155,7 @@ export default function ReLitiPage() {
               </div>
               
               {/* With ReLiti */}
-              <div className="overflow-hidden rounded-2xl border border-accent/30 bg-card p-8 transition-all duration-300 hover:shadow-accent/15">
+              <div className="overflow-hidden rounded-2xl border border-accent/30 bg-card-custom p-8 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -192,7 +192,7 @@ export default function ReLitiPage() {
             </p>
             
             <div className="mt-14 grid gap-10 sm:grid-cols-3">
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
                   <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
@@ -210,7 +210,7 @@ export default function ReLitiPage() {
                 </div>
               </div>
               
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
                   <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
@@ -227,7 +227,7 @@ export default function ReLitiPage() {
                 </div>
               </div>
               
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
                   <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
@@ -245,7 +245,7 @@ export default function ReLitiPage() {
               </div>
             </div>
             
-            <div className="relative mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-xl">
+            <div className="relative mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl border border-border bg-card-custom p-8 shadow-xl">
               <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
               <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
               <h3 className="text-2xl font-bold text-foreground">Pricing</h3>
@@ -277,7 +277,7 @@ export default function ReLitiPage() {
             </p>
             
             <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="group cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/80 p-6 transition-all duration-300 hover:shadow-accent/15">
+              <div className="group cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-card-custom to-card-custom/80 p-6 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
@@ -288,7 +288,7 @@ export default function ReLitiPage() {
                 <p className="text-muted-foreground">Save valuable time for meaningful legal work instead of mindless clicking</p>
               </div>
               
-              <div className="group cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/80 p-6 transition-all duration-300 hover:shadow-accent/15">
+              <div className="group cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-card-custom to-card-custom/80 p-6 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -298,7 +298,7 @@ export default function ReLitiPage() {
                 <p className="text-muted-foreground">No more repetitive manual downloads that drain your energy and focus</p>
               </div>
               
-              <div className="group cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/80 p-6 transition-all duration-300 hover:shadow-accent/15">
+              <div className="group cursor-pointer overflow-hidden rounded-xl bg-gradient-to-br from-card-custom to-card-custom/80 p-6 transition-all duration-300 hover:shadow-accent/15">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
                   <svg className="h-8 w-8 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -331,7 +331,7 @@ export default function ReLitiPage() {
               <Link
                 href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
                 target="_blank"
-                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-accent px-8 py-3 text-lg font-medium text-primary-bg transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
                   Get <ButtonLogo dark className="mx-2 inline-block" /> Now
@@ -349,11 +349,17 @@ export default function ReLitiPage() {
         :root {
           --primary-bg: #FFFFFF;
           --accent: #038CF7;
+          --card-bg: #F5F8FA;
+          --button-color: #0469BA;
+          --button-text: #FFFFFF;
         }
         
         .dark {
           --primary-bg: #001A33;
           --accent: #038CF7;
+          --card-bg: #002A4E;
+          --button-color: #05A3F7;
+          --button-text: #001C36;
         }
         
         .bg-primary-bg {
@@ -372,12 +378,24 @@ export default function ReLitiPage() {
           background-color: var(--accent);
         }
         
+        .bg-button {
+          background-color: var(--button-color);
+        }
+        
+        .text-button {
+          color: var(--button-text);
+        }
+        
         .hover\:shadow-accent\/50:hover {
           box-shadow: 0 0 15px rgba(3, 140, 247, 0.5);
         }
         
         .hover\:shadow-accent\/15:hover {
           box-shadow: 0 0 20px rgba(3, 140, 247, 0.15);
+        }
+        
+        .bg-card-custom {
+          background-color: var(--card-bg);
         }
       `}</style>
     </div>
