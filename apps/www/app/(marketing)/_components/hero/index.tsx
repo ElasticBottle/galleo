@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <Section
       id="hero"
-      className="flex flex-col items-center justify-center mx-auto max-w-screen-xl px-4 py-12 sm:py-16 md:py-20"
+      className="flex flex-col items-center justify-center mx-auto max-w-screen-xl px-4 py-6 sm:py-10 md:py-14"
     >
       <div className="w-full max-w-3xl mx-auto text-center">
         <HeroTitle />

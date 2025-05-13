@@ -72,3 +72,16 @@
 .cta-button-light:hover {
   background-color: rgba(25, 64, 102, 0.9);
 }
+.cta-button-light.dark\:bg-blue-700 {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.card-outline {
+  border: 1.5px solid var(--border);
+  background: white;
+}
+.dark .card-outline {
+  background: #0f172a;
+  border-color: #334155;
+}

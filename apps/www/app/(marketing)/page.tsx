@@ -19,12 +19,10 @@ export default function LandingPage() {
       
       <Section subtitle={<>What is <span className="text-accent">Galleo</span>?</>}>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">AI-Powered Trademark Response Generator</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">Your Trademark Response Powerhouse</h2>
           <div className="text-muted-foreground">
             <p>
-              Galleo turns hours of trademark inquiry drafting into seconds, 
-              instantly generating complete assessments, fee quotes, and NICE classifications. 
-              Free your talented staff from repetitive tasks and increase your firm's profitability.
+              Galleo seamlessly integrates into your workflow, transforming client trademark inquiries into revenue opportunities with one-click processing. Our AI analyzes complex trademark scenarios, navigates international regulations, and produces client-ready responses that maintain your firm's voice and expertise.
             </p>
           </div>
         </div>
@@ -264,25 +262,23 @@ export default function LandingPage() {
       <Section subtitle={<>Get Started in <span className="text-accent">3 Simple Steps</span></>}>
         <div className="mx-auto max-w-4xl">
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">
-                <span className="text-accent text-2xl font-bold">1</span>
+            <div className="border rounded-xl p-8 flex flex-col items-center text-center shadow-sm bg-white dark:bg-slate-900">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent mb-4">
+                <svg className="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path d="M12 3v14m0 0l-4-4m4 4l4-4" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <h3 className="text-xl font-bold mb-2">Install on Outlook</h3>
               <p className="text-muted-foreground">Add Galleo to your Microsoft Outlook with a simple installation process. No complex setup required.</p>
             </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">
-                <span className="text-accent text-2xl font-bold">2</span>
+            <div className="border rounded-xl p-8 flex flex-col items-center text-center shadow-sm bg-white dark:bg-slate-900">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent mb-4">
+                <svg className="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2.5"/><path d="M8 12h8m-4-4v8" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <h3 className="text-xl font-bold mb-2">Login via Microsoft</h3>
               <p className="text-muted-foreground">Securely authenticate with your existing Microsoft account. No new credentials to remember.</p>
             </div>
-            
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">
-                <span className="text-accent text-2xl font-bold">3</span>
+            <div className="border rounded-xl p-8 flex flex-col items-center text-center shadow-sm bg-white dark:bg-slate-900">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent mb-4">
+                <svg className="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <h3 className="text-xl font-bold mb-2">Start Using</h3>
               <p className="text-muted-foreground">Begin generating trademark responses instantly with a single click. Save hours on your very first day.</p>
