@@ -60,39 +60,11 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Turn 130+ Clicks Into Just One
+              Turn <span className="text-accent">130+ Clicks</span> Into Just <span className="text-accent">One</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               Your billable hours are too valuable for repetitive downloads. <span className="text-accent font-semibold">ReLiti</span> automates court searches so you can focus on high-value legal work instead of mindless clicking. Used by legal professionals to save 40+mins per search and eliminate human error.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* One Click to Automation Section (moved up, single card) */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-8">
-              Reclaim your billable hours with automated court searches:
-            </h2>
-            <div className="mx-auto max-w-xl rounded-2xl border border-sky-300 bg-white dark:bg-[#153048] p-8 text-left shadow-xl">
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Download all 130+ documents with a single click</li>
-                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Zero risk of missing critical documents</li>
-                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Complete court searches in minutes, not hours</li>
-                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Seamless integration with your existing E-Litigation workflow</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quote Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-2xl text-center">
-            <blockquote className="italic text-xl text-muted-foreground border-l-4 border-sky-300 pl-6">“As an associate handling multiple transactions daily, ReLiti has been a game-changer for my productivity and accuracy.”</blockquote>
           </div>
         </div>
       </section>
@@ -146,6 +118,40 @@ export default function ReLitiPage() {
                   One click and <span className="text-accent font-bold mx-2">ReLiti</span> automatically handles all downloads for you. Spend your time on more valuable legal work.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* One Click to Automation Section (moved up, single card) */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-8">
+              Stop <span className="text-accent">Clicking</span>. Start <span className="text-accent">Billing.</span> <span className="text-accent font-bold">ReLiti</span> Handles the Rest.
+            </h2>
+            <div className="mx-auto max-w-xl rounded-2xl border border-sky-300 bg-white dark:bg-[#153048] p-8 text-left shadow-xl">
+              <ul className="space-y-4 text-lg">
+                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Download all 130+ documents with a single click</li>
+                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Zero risk of missing critical documents</li>
+                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Complete court searches in minutes, not hours</li>
+                <li className="flex items-start gap-3"><span className="mt-1"><svg className="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="11" stroke="#38b6ff" strokeWidth="2" fill="#e0f2fe" /><path d="M7 13l3 3 7-7" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>Seamless integration with your existing E-Litigation workflow</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Section (prominent) */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-2xl">
+            <div className="relative rounded-2xl border border-sky-200 bg-white dark:bg-[#153048] shadow-xl px-8 py-12 flex flex-col items-center text-center">
+              <svg className="mb-6 h-12 w-12 text-sky-400" fill="none" viewBox="0 0 48 48" stroke="currentColor" strokeWidth="2">
+                <path d="M16 20c0-6 4-10 10-10s10 4 10 10c0 4-2 7-6 9l-2 1v2a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2l-2-1c-4-2-6-5-6-9z" fill="#e0f2fe" stroke="#38b6ff" strokeWidth="2.5"/>
+              </svg>
+              <blockquote className="italic text-2xl font-semibold text-foreground mb-4">“As an associate handling multiple transactions daily, ReLiti has been a game-changer for my productivity and accuracy.”</blockquote>
+              <div className="text-muted-foreground text-lg font-medium">— Associate Lawyer, ReLiti User</div>
             </div>
           </div>
         </div>
@@ -241,7 +247,7 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl bg-primary-bg p-12 text-center">
             <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Ready to Eliminate Tedious Court Searches?
+            Ready for the <span className="text-accent">One Click</span> that <span className="text-accent font-bold">Downloads</span> it All?
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Join the many legal professionals who've modernized their court search workflow with <span className="text-accent font-semibold mx-2">ReLiti</span>.
