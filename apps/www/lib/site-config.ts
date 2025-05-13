@@ -42,7 +42,7 @@ export const siteConfig: SiteConfig = {
       buttonVariant: "default",
       target: "_blank",
       href: TRADEMARK_ASSISTANT_URL,
-      label: "Try It Today",
+      label: "Try Galleo Today",
     },
   ],
   hero: {
@@ -56,7 +56,7 @@ export const siteConfig: SiteConfig = {
       "Galleo instantly generates complete trademark enquiry assessments, precise fee quotes, and accurate NICE classifications—freeing your talent for billable work.",
     cta: {
       href: TRADEMARK_ASSISTANT_URL,
-      label: "Try It Today",
+      label: "Try Galleo Today",
       target: "_blank",
       buttonVariant: "default",
     },
@@ -91,7 +91,7 @@ export const siteConfig: SiteConfig = {
   },
   cta: {
     subtitle: "Ready to Stop Drafting and Start Billing?",
-    buttonText: "Try It Today",
+    buttonText: "Try Galleo Today",
     href: TRADEMARK_ASSISTANT_URL,
   },
   footer: {

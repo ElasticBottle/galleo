@@ -49,23 +49,23 @@ export function constructMetadata({
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        url: "/galleo-favicon.svg",
+        url: "/galleo-ll-16x16.svg",
       },
       {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        url: "/galleo-favicon.svg",
+        url: "/galleo-ll-16x16.svg",
       },
 
       {
         rel: "shortcut icon",
-        url: "/galleo-favicon.svg",
+        url: "/galleo-ll-16x16.svg",
       },
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        url: "/galleo-favicon.svg",
+        url: "/galleo-ll-16x16.svg",
       },
     ],
     manifest: "/site.webmanifest",
