@@ -3,6 +3,7 @@
 import { Icons } from "@galleo/ui/icon";
 import { useTheme } from "@galleo/ui/theme-provider";
 import { cn } from "@galleo/ui/utils/cn";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,6 +11,7 @@ import { useEffect, useState } from "react";
 export default function ReLitiPage() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const ease = [0.16, 1, 0.3, 1];
 
   // Effect to handle mounting (avoid hydration mismatch)
   useEffect(() => {
@@ -23,7 +25,7 @@ export default function ReLitiPage() {
   return (
     <div className="flex flex-col bg-primary-bg text-foreground">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-20 md:py-24">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-30"></div>
           <div className="absolute -left-20 top-20 h-64 w-64 rounded-full bg-accent opacity-20 blur-3xl"></div>
@@ -31,26 +33,100 @@ export default function ReLitiPage() {
         </div>
         <div className="container relative z-10 mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-sans text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-              Click Once. <span className="text-accent font-bold">ReLiti</span> Does <span className="text-accent">The Rest.</span>
-            </h1>
-            <p className="mt-8 text-xl leading-relaxed text-muted-foreground">
-              <span className="text-accent font-semibold">ReLiti</span> automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
-            </p>
-            <div className="mt-10 flex justify-center">
+            <motion.h1
+              className="font-sans text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl"
+              initial={{ filter: "blur(10px)", opacity: 0, y: 50 }}
+              animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease,
+                staggerChildren: 0.2,
+              }}
+            >
+              <motion.span
+                className="inline-block text-balance leading-[1.15] tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0,
+                  ease,
+                }}
+              >
+                Click Once.
+              </motion.span>{" "}
+              <motion.span
+                className="inline-block text-accent font-bold text-balance leading-[1.15] tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease,
+                }}
+              >
+                ReLiti
+              </motion.span>{" "}
+              <motion.span
+                className="inline-block text-balance leading-[1.15] tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.4,
+                  ease,
+                }}
+              >
+                Does
+              </motion.span>{" "}
+              <motion.span
+                className="inline-block text-accent text-balance leading-[1.15] tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.6,
+                  ease,
+                }}
+              >
+                The Rest.
+              </motion.span>
+            </motion.h1>
+            <motion.p
+              className="mt-8 text-xl leading-relaxed text-muted-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.8,
+                duration: 0.8,
+                ease,
+              }}
+            >
+              ReLiti automates E-Litigation downloads with one click so you never waste time on mindless clicking again.
+            </motion.p>
+            <motion.div
+              className="mt-10 flex justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 1.0,
+                duration: 0.8,
+                ease,
+              }}
+            >
               <Link
                 href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
                 target="_blank"
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <span className="text-button font-bold mx-2">ReLiti</span> & Reclaim Your Time
+                  Get ReLiti & Reclaim Your Time
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </span>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -63,7 +139,7 @@ export default function ReLitiPage() {
               Turn <span className="text-accent">130+ Clicks</span> Into Just <span className="text-accent">One</span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Your billable hours are too valuable for repetitive downloads. <span className="text-accent font-semibold">ReLiti</span> automates court searches so you can focus on high-value legal work instead of mindless clicking. Used by legal professionals to save 40+mins per search and eliminate human error.
+              Your billable hours are too valuable for repetitive downloads. ReLiti automates court searches so you can focus on high-value legal work instead of mindless clicking. Used by legal professionals to save 40+mins per search and eliminate human error.
             </p>
           </div>
         </div>
@@ -75,14 +151,14 @@ export default function ReLitiPage() {
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Without ReLiti */}
-              <div className="overflow-hidden rounded-2xl border border-sky-300 bg-white dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-lg">
+              <div className="overflow-hidden rounded-2xl border border-muted bg-white dark:bg-[#0A2A40] p-8 transition-all duration-300 hover:shadow-lg">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
                   <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16" cy="16" r="14" stroke="#ef4444" strokeWidth="2.5" fill="#fee2e2" />
                     <text x="16" y="21" textAnchor="middle" fontSize="18" fill="#ef4444" fontWeight="bold">?</text>
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">Without <span className="text-accent font-bold ml-2">ReLiti</span></h3>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">Without ReLiti</h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-muted">
                   <Image
                     src="/without-reliti.gif"
@@ -105,7 +181,7 @@ export default function ReLitiPage() {
                     <path d="M12.5 16.5L15.5 19.5L20 14" stroke="#38b6ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold text-foreground">With <span className="text-accent font-bold ml-2">ReLiti</span></h3>
+                <h3 className="mb-3 text-2xl font-bold text-foreground">With ReLiti</h3>
                 <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-lg bg-muted">
                   <Image
                     src="/with-reliti.gif"
@@ -117,7 +193,7 @@ export default function ReLitiPage() {
                   />
                 </div>
                 <p className="text-muted-foreground">
-                  One click and <span className="text-accent font-bold mx-2">ReLiti</span> automatically handles all downloads for you. Spend your time on more valuable legal work.
+                  One click and ReLiti automatically handles all downloads for you. Spend your time on more valuable legal work.
                 </p>
               </div>
             </div>
@@ -152,7 +228,7 @@ export default function ReLitiPage() {
               <span className="text-accent">Free</span> Access, <span className="text-accent">Easy</span> Setup
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Getting started with <span className="text-accent font-semibold mx-2">ReLiti</span> is quick and straightforward. Two simple steps and you're ready to save hours of your valuable time.
+              Getting started with ReLiti is quick and straightforward. Two simple steps and you're ready to save hours of your valuable time.
             </p>
             
             <div className="mt-14 flex flex-col md:flex-row gap-10 justify-center">
@@ -170,10 +246,10 @@ export default function ReLitiPage() {
                     </div>
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-foreground">Install</h3>
-                  <p className="text-muted-foreground">Download <span className="text-accent font-semibold mx-2">ReLiti</span> from the Chrome Web Store in seconds</p>
+                  <p className="text-muted-foreground">Download ReLiti from the Chrome Web Store in seconds</p>
                 </div>
               </div>
-              {/*
+              {/* Intentionally left commented out as in original code
               <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
@@ -209,7 +285,7 @@ export default function ReLitiPage() {
               </div>
             </div>
             
-            {/*
+            {/* Intentionally left commented out as in original code
             <div className="relative mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl border border-border bg-card-custom p-8 shadow-xl">
               <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
               <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
@@ -239,7 +315,7 @@ export default function ReLitiPage() {
             Ready for the <span className="text-accent">One Click</span> that <span className="text-accent font-bold">Downloads</span> it All?
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              Join the many legal professionals who've modernized their court search workflow with <span className="text-accent font-semibold mx-2">ReLiti</span>.
+              Join the many legal professionals who've modernized their court search workflow with ReLiti.
             </p>
             <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:justify-center">
               <Link
@@ -248,7 +324,7 @@ export default function ReLitiPage() {
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
                 <span className="relative z-10 flex items-center">
-                  Get <span className="text-button font-bold mx-2">ReLiti</span> Now
+                  Get ReLiti Now
                   <svg className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
