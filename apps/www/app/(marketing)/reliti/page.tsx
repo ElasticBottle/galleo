@@ -72,14 +72,6 @@ export default function ReLitiPage() {
       {/* Side-by-Side Comparison Section (updated text and icons) */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-                Turn <span className="text-accent">130+ Clicks</span> Into Just <span className="text-accent">One</span>
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Your billable hours are too valuable for repetitive downloads. <span className="text-accent font-semibold">ReLiti</span> automates court searches so you can focus on high-value legal work instead of mindless clicking. Used by legal professionals to save 40+mins per search and eliminate human error.
-              </p>
-            </div>
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-8 md:grid-cols-2">
               {/* Without ReLiti */}
@@ -153,14 +145,14 @@ export default function ReLitiPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-sans text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Easy <span className="text-accent">Setup.</span>
+              <span className="text-accent">Free</span> Access, <span className="text-accent">Easy</span> Setup
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Getting started with <span className="text-accent font-semibold mx-2">ReLiti</span> is quick and straightforward. Three simple steps and you're ready to save hours of your valuable time.
+              Getting started with <span className="text-accent font-semibold mx-2">ReLiti</span> is quick and straightforward. Two simple steps and you're ready to save hours of your valuable time.
             </p>
             
-            <div className="mt-14 grid gap-10 sm:grid-cols-3">
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
+            <div className="mt-14 flex flex-col md:flex-row gap-10 justify-center">
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15 max-w-sm">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
                   <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
@@ -195,7 +187,7 @@ export default function ReLitiPage() {
                 </div>
               </div>
               */}
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15 max-w-sm">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
                   <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
@@ -212,6 +204,7 @@ export default function ReLitiPage() {
                 </div>
               </div>
             </div>
+            
             {/*
             <div className="relative mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl border border-border bg-card-custom p-8 shadow-xl">
               <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
