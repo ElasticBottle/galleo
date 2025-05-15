@@ -90,7 +90,7 @@ export default function ReLitiPage() {
               }}
             >
               <Link
-                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+                href="https://chromewebstore.google.com/detail/reliti-by-galleo/mligahkbimlnfogfnkchedcppejpmfkb?authuser=0&hl=en"
                 target="_blank"
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-100 hover:bg-opacity-90 hover:shadow-accent/50"
               >
@@ -206,7 +206,7 @@ export default function ReLitiPage() {
               <span className="text-accent">Free</span> Access, <span className="text-accent">Easy</span> Setup
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Getting started with ReLiti is quick and straightforward. Two simple steps and you're ready to save hours of your valuable time.
+              Getting started with ReLiti is quick and straightforward. Follow these steps to automate your downloads.
             </p>
             
             <div className="mt-14 flex flex-col md:flex-row gap-10 justify-center">
@@ -223,28 +223,10 @@ export default function ReLitiPage() {
                       <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">1</div>
                     </div>
                   </div>
-                  <h3 className="mb-3 text-xl font-bold text-foreground">Install</h3>
-                  <p className="text-muted-foreground">Download ReLiti from the Chrome Web Store in seconds</p>
+                  <h3 className="mb-3 text-xl font-bold text-foreground">Search as Usual</h3>
+                  <p className="text-muted-foreground">Start by conducting your cause book search in eLitigation as you normally would. Enter your search criteria and generate the results.</p>
                 </div>
               </div>
-              {/* Intentionally left commented out as in original code
-              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15">
-                <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
-                <div className="relative z-10">
-                  <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
-                    <div className="relative">
-                      <svg className="h-10 w-10 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                      <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">2</div>
-                    </div>
-                  </div>
-                  <h3 className="mb-3 text-xl font-bold text-foreground">Sign In</h3>
-                  <p className="text-muted-foreground">Connect with your Microsoft account</p>
-                </div>
-              </div>
-              */}
               <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15 max-w-sm">
                 <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
                 <div className="relative z-10">
@@ -257,30 +239,52 @@ export default function ReLitiPage() {
                       <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">2</div>
                     </div>
                   </div>
-                  <h3 className="mb-3 text-xl font-bold text-foreground">Start Using</h3>
-                  <p className="text-muted-foreground">Navigate to E-Litigation and enjoy the automation</p>
+                  <h3 className="mb-3 text-xl font-bold text-foreground">Navigate to Cause Book Search</h3>
+                  <p className="text-muted-foreground">Once your search results appear, locate the "Cause Book Search" tab in the left navigation panel.</p>
+                  <div className="mt-4">
+                    <img src="/path/to/gif2.gif" alt="Navigate to Cause Book Search" className="rounded-lg shadow-lg" />
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15 max-w-sm">
+                <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div className="relative z-10">
+                  <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
+                    <div className="relative">
+                      <svg className="h-10 w-10 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">3</div>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-foreground">Select Your Transaction</h3>
+                  <p className="text-muted-foreground">From the search results table, click on the specific transaction reference number that you want to download information for.</p>
+                  <div className="mt-4">
+                    <img src="/path/to/gif3.gif" alt="Select Your Transaction" className="rounded-lg shadow-lg" />
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15 max-w-sm">
+                <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-20"></div>
+                <div className="relative z-10">
+                  <div className="mb-6 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-accent/10">
+                    <div className="relative">
+                      <svg className="h-10 w-10 text-accent" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-xs font-bold text-button">4</div>
+                    </div>
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-foreground">Use ReLiti to Download</h3>
+                  <p className="text-muted-foreground">Click the ReLiti icon in your Chrome browser extension bar, then press the "Download" button.</p>
+                  <div className="mt-4">
+                    <img src="/path/to/gif4.gif" alt="Use ReLiti to Download" className="rounded-lg shadow-lg" />
+                  </div>
                 </div>
               </div>
             </div>
-            
-            {/* Intentionally left commented out as in original code
-            <div className="relative mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl border border-border bg-card-custom p-8 shadow-xl">
-              <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
-              <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-accent opacity-5 blur-3xl"></div>
-              <h3 className="text-2xl font-bold text-foreground">Pricing</h3>
-              <div className="mt-6 flex flex-col space-y-8 sm:flex-row sm:items-center sm:justify-around sm:space-y-0">
-                <div className="text-center">
-                  <div className="mb-2 text-sm font-medium uppercase tracking-wider text-muted-foreground">First 2 uses</div>
-                  <div className="text-3xl font-bold text-accent">FREE</div>
-                </div>
-                <div className="hidden h-16 border-l border-border sm:block"></div>
-                <div className="text-center">
-                  <div className="mb-2 text-sm font-medium uppercase tracking-wider text-muted-foreground">After that</div>
-                  <div className="text-3xl font-bold text-foreground">$10<span className="text-lg font-normal text-muted-foreground">/month</span></div>
-                </div>
-              </div>
-            </div>
-            */}
           </div>
         </div>
       </section>
@@ -297,7 +301,7 @@ export default function ReLitiPage() {
             </p>
             <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:justify-center">
               <Link
-                href="https://chrome.google.com/webstore/detail/reliti/your-extension-id"
+                href="https://chromewebstore.google.com/detail/reliti-by-galleo/mligahkbimlnfogfnkchedcppejpmfkb?authuser=0&hl=en"
                 target="_blank"
                 className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-md bg-button px-8 py-3 text-lg font-medium text-button transition-all duration-300 hover:bg-opacity-90 hover:shadow-accent/50"
               >
