@@ -225,6 +225,9 @@ export default function ReLitiPage() {
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-foreground">Search as Usual</h3>
                   <p className="text-muted-foreground">Start by conducting your cause book search in eLitigation as you normally would. Enter your search criteria and generate the results.</p>
+                  <div className="mt-4">
+                    <img src="/path/to/placeholder.gif" alt="Placeholder for GIF" className="rounded-lg shadow-lg" />
+                  </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-2xl border border-border bg-card-custom p-8 transition-all duration-300 hover:border-accent/50 hover:shadow-accent/15 max-w-sm">
