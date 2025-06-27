@@ -44,7 +44,7 @@
   "devDependencies": {
     "@galleo/typescript": "workspace:*",
     "@types/node": "catalog:",
-    "drizzle-kit": "^0.30.4",
+    "drizzle-kit": "^0.31.4",
     "typescript": "catalog:"
   }
 }
