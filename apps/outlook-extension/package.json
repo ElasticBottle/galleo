@@ -40,7 +40,7 @@
     "@galleo/typescript": "workspace:*",
     "@tanstack/router-plugin": "^1.99.0",
     "@types/node": "catalog:",
-    "@types/office-js": "^1.0.462",
+    "@types/office-js": "^1.0.525",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
     "@vitejs/plugin-react": "^4.3.2",
