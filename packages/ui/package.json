@@ -17,7 +17,7 @@
     "ui-add": "pnpx shadcn@latest add && pnpx @biomejs/biome lint --write --unsafe"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "postcss": "^8.5.1",
     "react": "catalog:react19",
     "tailwindcss": "catalog:",
