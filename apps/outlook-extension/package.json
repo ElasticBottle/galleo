@@ -43,7 +43,7 @@
     "@types/office-js": "^1.0.462",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
-    "@vitejs/plugin-react": "^4.3.2",
+    "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.20",
     "office-addin-debugging": "^5.1.6",
     "office-addin-dev-settings": "^2.3.6",
