@@ -50,7 +50,7 @@
     "office-addin-lint": "^2.3.5",
     "office-addin-manifest": "^1.13.6",
     "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "^3.4.19",
     "tsx": "^4.19.3",
     "vite": "^6.2.4",
     "vite-plugin-mkcert": "^1.17.6",
